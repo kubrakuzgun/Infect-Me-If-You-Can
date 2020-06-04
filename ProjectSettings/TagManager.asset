@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GasTank
+  - Target
+  - Metal
+  - ExplosiveBarrel
+  - SyringeGun
+  - SyringeGun_Aim
+  - MedGun
+  - Medgun_Aim
+  - Fence
+  - Light
+  - Blocker
+  - Medicine
+  - Syringe
+  - LiquidSanitizer
+  - SteamSanitizer
+  - Mask
+  - Kolonya
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
