@@ -21,6 +21,7 @@ TagManager:
   - SteamSanitizer
   - Mask
   - Kolonya
+  - Bank
   layers:
   - Default
   - TransparentFX
@@ -30,8 +31,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Roads
+  - Walkable
   - 
   - 
   - 

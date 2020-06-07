@@ -1,31 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CatController : MonoBehaviour
 {
+    public float wanderRadius;
+    public float wanderTimer;
+
+    private NavMeshAgent agent;
+    
+    private float timer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        timer = wanderTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move the object forward along its z axis 1 unit/second.
-        transform.Translate(Vector3.forward * Time.deltaTime/2);
-
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Light" || other.tag == "Blocker" || other.tag == "Fence")
+        timer += Time.deltaTime;
+        if (timer >= wanderTimer)
         {
-            transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
-            transform.Translate(Vector3.forward * Time.deltaTime / 2);
+            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+            agent.SetDestination(newPos);
+            timer = 0;
         }
-
     }
+    
+    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    {
+        Vector3 randDirection = Random.insideUnitSphere * dist;
+
+        randDirection += origin;
+
+        NavMeshHit navHit;
+
+        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+
+        return navHit.position;
+    }
+
 }

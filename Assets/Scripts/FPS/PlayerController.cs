@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 	public GameObject syringegun, medgun, lqsanitizer, stsanitizer;
 	public GameObject syraim, medaim, lqaim, staim;
 	Boolean medactive, syractive, lqactive, stactive;
+
+	public static PlayerController instance;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -28,6 +30,11 @@ public class PlayerController : MonoBehaviour
 		
 
 
+	}
+
+	private void Awake()
+	{
+		instance = this;
 	}
 
 	// Update is called once per frame

@@ -1,53 +1,62 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class InfectedPeopleHealer : MonoBehaviour
 {
-    Animator walkanim;
+    private NavMeshAgent agent;
     public GameObject virus;
     public int health;
-    public float walkspeed;
-    bool walkenabled;
+    private float timer;
+    
+    public float wanderRadius;
+    public float wanderTimer;
 
     // Start is called before the first frame update
     void Start()
     {
-        walkanim = GetComponent<Animator>();
-        walkenabled = true;
-
+        agent = GetComponent<NavMeshAgent>();
+        timer = wanderTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (walkenabled == true)
+        timer += Time.deltaTime;
+        if (timer >= wanderTimer)
         {
-            walkanim.Play("Take 001");
-            transform.Translate(Vector3.forward * walkspeed);
+            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+            agent.SetDestination(newPos);
+            timer = 0;
         }
-        else
-            walkanim.Play("Wait");
-
 
     }
 
+    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    {
+        Vector3 randDirection = Random.insideUnitSphere * dist;
+
+        randDirection += origin;
+
+        NavMeshHit navHit;
+
+        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+
+        return navHit.position;
+    }
+
+    
     private void OnTriggerEnter(Collider other)
     {
 
         if (other.tag == "Syringe")
         {
-            walkenabled = false;
             health += 25;
 
             if (health >= 100)
             {
-                WaitForSeconds seconds = new WaitForSeconds(5);
                 virus.SetActive(false);
-
-                walkanim.Play("LongWait");
-
-                walkenabled = true;
             }
         }
 
