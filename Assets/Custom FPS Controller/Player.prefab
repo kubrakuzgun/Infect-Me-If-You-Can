@@ -6238,7 +6238,7 @@ MonoBehaviour:
   sprintKey: 304
   sprintSpeed: 10
   jumpPower: 6
-  canJump: 1
+  canJump: 0
   canHoldJump: 0
   useStamina: 1
   staminaDepletionSpeed: 2
@@ -6282,7 +6282,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     fovStart: 0
   advanced:
-    gravityMultiplier: 1
+    gravityMultiplier: 1.52
     zeroFrictionMaterial: {fileID: 0}
     highFrictionMaterial: {fileID: 0}
     _maxSlopeAngle: 70
