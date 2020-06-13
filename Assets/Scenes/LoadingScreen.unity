@@ -671,6 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 60603526}
+  loader: {fileID: 1449874128}
 --- !u!4 &1449874130
 Transform:
   m_ObjectHideFlags: 0

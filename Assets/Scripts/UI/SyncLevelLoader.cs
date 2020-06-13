@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class SyncLevelLoader : MonoBehaviour
 {
     public Slider slider;
-
+    public GameObject loader;
 
     IEnumerator LoadAsynchronously()
     {
@@ -21,17 +21,21 @@ public class SyncLevelLoader : MonoBehaviour
             slider.value = progress;
             yield return null;
         }
+        if (operation.isDone)
+        {
+            loader.SetActive(false);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(LoadAsynchronously());
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(LoadAsynchronously());
-
     }
 }
