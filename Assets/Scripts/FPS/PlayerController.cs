@@ -32,16 +32,10 @@ public class PlayerController : MonoBehaviour
 
 	}
 
-	private void Awake()
-	{
-		instance = this;
-	}
 
 	// Update is called once per frame
 	void Update()
 	{
-
-
 
 		if (syractive == false && Input.GetKeyDown(KeyCode.Alpha1))
 		{
@@ -105,7 +99,6 @@ public class PlayerController : MonoBehaviour
 			lqactive = false;
 
 		}
-
 
 
 
@@ -173,10 +166,7 @@ public class PlayerController : MonoBehaviour
 
 			}
 
-
 		}
-
-
 
 	}
 }
