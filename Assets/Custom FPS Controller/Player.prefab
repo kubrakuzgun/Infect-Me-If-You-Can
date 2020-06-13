@@ -8096,6 +8096,7 @@ MonoBehaviour:
     - {fileID: 0}
     rockAndConcretePhysMat:
     - {fileID: 13400000, guid: 80a02dead687bf24cae0b7434b72f81d, type: 2}
+    - {fileID: 13400000, guid: 8b2bc5d65b8a23249ac65e6a71b72204, type: 2}
     mudPhysMat:
     - {fileID: 0}
     customPhysMat:
@@ -8116,7 +8117,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: a167548a5fd621949b1d14804fc721a6, type: 3}
     dirtAndGravelClipSet: []
     rockAndConcreteClipSet:
-    - {fileID: 8300000, guid: c40f10b5963015b479c7de7e22ceac94, type: 3}
+    - {fileID: 8300000, guid: ffeb60b812fdc464499d8bd1c46cd055, type: 3}
+    - {fileID: 8300000, guid: e38fa940edefdd9479e226e6a3d4787e, type: 3}
     mudClipSet: []
     customClipSet:
     - {fileID: 8300000, guid: fb6839219f2c6674996d76c7d9626311, type: 3}
