@@ -36,8 +36,7 @@ public class SyringeHeal : MonoBehaviour
             }
 
         }
-        this.gameObject.SetActive(false);
-//        Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 
 

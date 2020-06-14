@@ -33,7 +33,7 @@ public class SyncLevelLoader : MonoBehaviour
     {
         loader.SetActive(true);
 
-    //    StartCoroutine(LoadAsynchronously());
+        StartCoroutine(LoadAsynchronously());
 
     }
 
