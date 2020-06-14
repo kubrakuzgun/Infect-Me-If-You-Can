@@ -16,16 +16,15 @@ public class EnemyController : MonoBehaviour
 
     private Animator animator;
     private bool isTriggered = false;
-    private GameObject bank;
+    public GameObject bank;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerController = GetComponent<PlayerController>();
         target = PlayerController.instance.syraim.transform;
         agent = GetComponent<NavMeshAgent>();
-        playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
-        bank = GameObject.FindGameObjectWithTag("Bank");
     }
 
     // Update is called once per frame

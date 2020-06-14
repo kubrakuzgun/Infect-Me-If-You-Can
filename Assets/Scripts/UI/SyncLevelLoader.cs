@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +11,7 @@ public class SyncLevelLoader : MonoBehaviour
 
     IEnumerator LoadAsynchronously()
     {
+
         AsyncOperation operation = SceneManager.LoadSceneAsync("30 Büyükşehir ve Zonguldak");
 
 
@@ -24,13 +24,16 @@ public class SyncLevelLoader : MonoBehaviour
         if (operation.isDone)
         {
             loader.SetActive(false);
+            yield return null;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LoadAsynchronously());
+        loader.SetActive(true);
+
+    //    StartCoroutine(LoadAsynchronously());
 
     }
 
