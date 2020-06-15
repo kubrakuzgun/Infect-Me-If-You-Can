@@ -22,6 +22,7 @@ TagManager:
   - Mask
   - Kolonya
   - Bank
+  - MaskPack
   layers:
   - Default
   - TransparentFX
