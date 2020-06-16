@@ -22,11 +22,11 @@ public class MedicineShot : MonoBehaviour
             GameObject pill = Instantiate(pillprefab, gunbarrel.position, Quaternion.identity);
             Quaternion initialRot = pillprefab.transform.rotation;
 
-            pill.transform.rotation = initialRot;
+            pill.transform.rotation = initialRot * Quaternion.Euler(0.0f, 0.0f, 0.0f);
 
        
             // syringe.GetComponent<Rigidbody>().AddForce(gunbarrel.forward * forceamount, ForceMode.VelocityChange);
-            pill.GetComponent<Rigidbody>().AddForce(gunbarrel.up * forceamount);
+            pill.GetComponent<Rigidbody>().AddForce(-pill.transform.up * forceamount);
         }
 
     }
