@@ -25,6 +25,7 @@ TagManager:
   - MaskPack
   - Pill
   - OtherPills
+  - Ground
   layers:
   - Default
   - TransparentFX

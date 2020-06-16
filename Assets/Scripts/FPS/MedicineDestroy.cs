@@ -20,9 +20,14 @@ public class MedicineDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag != "Pill")
+        if(collision.collider.tag != "Pill" || collision.collider.tag != "OtherPills" || collision.collider.tag != "Player")
         {
-            Destroy(this.gameObject);
+           Destroy(this.gameObject);
+        }
+        else if (collision.collider.tag == "Ground")
+        {
+            Rigidbody rb = this.gameObject.GetComponent<Rigidbody>();
+            rb.velocity = Vector3.zero;
         }
     }
 }

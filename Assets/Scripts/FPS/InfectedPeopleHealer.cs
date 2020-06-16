@@ -58,6 +58,8 @@ public class InfectedPeopleHealer : MonoBehaviour
             {
                 virus.SetActive(false);
             }
+
+            Destroy(other.gameObject);
         }
         
         else if (other.tag == "Pill")
@@ -68,6 +70,7 @@ public class InfectedPeopleHealer : MonoBehaviour
             {
                 virus.SetActive(false);
             }
+            Destroy(other.gameObject);
         }
 
 
