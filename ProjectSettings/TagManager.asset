@@ -24,6 +24,7 @@ TagManager:
   - Bank
   - MaskPack
   - Pill
+  - OtherPills
   layers:
   - Default
   - TransparentFX

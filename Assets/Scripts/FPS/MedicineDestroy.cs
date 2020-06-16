@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MedicineDestroy : MonoBehaviour
@@ -19,6 +20,9 @@ public class MedicineDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(this.gameObject);
+        if(collision.collider.tag != "Pill")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

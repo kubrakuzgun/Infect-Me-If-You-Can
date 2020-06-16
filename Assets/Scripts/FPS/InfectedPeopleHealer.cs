@@ -62,7 +62,7 @@ public class InfectedPeopleHealer : MonoBehaviour
         
         else if (other.tag == "Pill")
         {
-            health += 10;
+            health += 5;
 
             if (health >= 100)
             {
