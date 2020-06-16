@@ -12423,7 +12423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pillprefab: {fileID: 2841216896910972992}
   gunbarrel: {fileID: 8250260505280471754}
-  forceamount: 15
+  forceamount: 20
 --- !u!1 &4985735669303656987
 GameObject:
   m_ObjectHideFlags: 0
