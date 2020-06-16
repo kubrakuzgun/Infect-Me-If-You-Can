@@ -11,7 +11,7 @@ public class SyringeShot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       newscale = new Vector3(0.03f, 0.03f, 0.03f);
+        newscale = new Vector3(0.03f, 0.03f, 0.03f);
     }
 
     // Update is called once per frame
@@ -21,6 +21,8 @@ public class SyringeShot : MonoBehaviour
         {
 
             GameObject syringe = Instantiate(needleprefab, gunbarrel.position, Quaternion.identity);
+            Rigidbody rb = syringe.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
             Quaternion initialRot = needleprefab.transform.rotation;
 
             syringe.transform.rotation = initialRot * Quaternion.Euler(6.0f, -30.0f, -2.0f);

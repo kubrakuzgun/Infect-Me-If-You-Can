@@ -20,13 +20,19 @@ public class MedicineShot : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject pill = Instantiate(pillprefab, gunbarrel.position, Quaternion.identity);
+            Rigidbody rb = pill.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+
             Quaternion initialRot = pillprefab.transform.rotation;
+            
+            pill.transform.rotation = initialRot * Quaternion.Euler(30.0f, 0.0f, 90.0f);
 
-            pill.transform.rotation = initialRot * Quaternion.Euler(0.0f, 0.0f, 0.0f);
+            //pill.GetComponent<Rigidbody>().AddForce(-gunbarrel.up * forceamount);
 
-       
-            // syringe.GetComponent<Rigidbody>().AddForce(gunbarrel.forward * forceamount, ForceMode.VelocityChange);
-            pill.GetComponent<Rigidbody>().AddForce(-pill.transform.up * forceamount);
+
+            pill.GetComponent<Rigidbody>().AddForce((Vector3.up * (-1)) * forceamount);
+
+
         }
 
     }
