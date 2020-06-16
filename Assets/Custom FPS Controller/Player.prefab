@@ -13668,7 +13668,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5446829238515350447}
   m_LocalRotation: {x: -0.06428252, y: 0.7050429, z: -0.1272321, w: 0.6946901}
-  m_LocalPosition: {x: -0.085, y: 0.002, z: -0.001}
+  m_LocalPosition: {x: -0.343, y: 0.025, z: -0}
   m_LocalScale: {x: 0.024107996, y: 0.02410801, z: 0.024107995}
   m_Children:
   - {fileID: 3910924081287552548}
@@ -13713,7 +13713,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5446829238515350447}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5232915
   m_Height: 8.153737
@@ -18465,7 +18465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6849781996425555940
 Transform:
   m_ObjectHideFlags: 0
@@ -23086,7 +23086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8064776417160868343
 Transform:
   m_ObjectHideFlags: 0

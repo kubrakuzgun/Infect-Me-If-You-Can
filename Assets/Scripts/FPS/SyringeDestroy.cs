@@ -21,7 +21,12 @@ public class SyringeDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(this.gameObject);
+
+        if (collision.collider.tag != "Syringe")
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
 
