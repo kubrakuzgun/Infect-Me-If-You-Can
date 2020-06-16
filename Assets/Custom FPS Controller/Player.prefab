@@ -12423,7 +12423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pillprefab: {fileID: 2841216896910972992}
   gunbarrel: {fileID: 8250260505280471754}
-  forceamount: 25
+  forceamount: 15
 --- !u!1 &4985735669303656987
 GameObject:
   m_ObjectHideFlags: 0
@@ -18525,7 +18525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6849781996425555940
 Transform:
   m_ObjectHideFlags: 0
@@ -23145,7 +23145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8064776417160868343
 Transform:
   m_ObjectHideFlags: 0
@@ -23855,13 +23855,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8086369568961880481}
-  m_LocalRotation: {x: 0.020449692, y: 0.008891069, z: -0.0015458539, w: -0.99975014}
-  m_LocalPosition: {x: -0.0021191572, y: 0.0032936027, z: 0.014513915}
+  m_LocalRotation: {x: 0.001380436, y: 0.008859962, z: -0.0017150866, w: -0.9999584}
+  m_LocalPosition: {x: 0.001, y: -0, z: 0.009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8265985373376763533}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.156, y: -1.016, z: 0.19800001}
 --- !u!1 &8158974550362709968
 GameObject:
   m_ObjectHideFlags: 0
