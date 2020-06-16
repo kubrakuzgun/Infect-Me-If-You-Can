@@ -1975,7 +1975,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 0.02
   m_Drag: 0.5
-  m_AngularDrag: 0.2
+  m_AngularDrag: 0.25
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8451,7 +8451,7 @@ GameObject:
   - component: {fileID: 4163426723866320855}
   m_Layer: 0
   m_Name: Pills_Prefab
-  m_TagString: Untagged
+  m_TagString: Pill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8483,7 +8483,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 0.02
   m_Drag: 0.5
-  m_AngularDrag: 0.2
+  m_AngularDrag: 0.25
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12077,7 +12077,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 0.02
   m_Drag: 0.5
-  m_AngularDrag: 0.2
+  m_AngularDrag: 0.25
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18525,7 +18525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6849781996425555940
 Transform:
   m_ObjectHideFlags: 0
@@ -22059,7 +22059,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 0.02
   m_Drag: 0.5
-  m_AngularDrag: 0.2
+  m_AngularDrag: 0.25
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -23145,7 +23145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8064776417160868343
 Transform:
   m_ObjectHideFlags: 0

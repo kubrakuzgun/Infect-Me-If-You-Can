@@ -23,6 +23,7 @@ TagManager:
   - Kolonya
   - Bank
   - MaskPack
+  - Pill
   layers:
   - Default
   - TransparentFX

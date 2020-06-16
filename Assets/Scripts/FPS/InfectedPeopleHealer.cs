@@ -59,6 +59,16 @@ public class InfectedPeopleHealer : MonoBehaviour
                 virus.SetActive(false);
             }
         }
+        
+        else if (other.tag == "Pill")
+        {
+            health += 10;
+
+            if (health >= 100)
+            {
+                virus.SetActive(false);
+            }
+        }
 
 
     }
