@@ -1898,7 +1898,7 @@ GameObject:
   - component: {fileID: 414408410193872174}
   m_Layer: 0
   m_Name: pill (1)
-  m_TagString: Pill
+  m_TagString: OtherPills
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4219,12 +4219,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2916641084976497331}
-  - component: {fileID: 2371211200385308305}
   - component: {fileID: 8513789246966416519}
   - component: {fileID: 6936575768655996249}
+  - component: {fileID: 7973327782393533574}
   m_Layer: 0
   m_Name: Pill_Prefab
-  m_TagString: Untagged
+  m_TagString: Pill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4237,7 +4237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553925007574722483}
   m_LocalRotation: {x: 0.020449182, y: 0.0088910805, z: -0.00154574, w: -0.99975014}
-  m_LocalPosition: {x: -0.0051, y: -0.008, z: 0.0164}
+  m_LocalPosition: {x: -0.0049, y: -0.0921, z: 0.0198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8569858533609425679}
@@ -4246,20 +4246,6 @@ Transform:
   m_Father: {fileID: 8265985373376763533}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2371211200385308305
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1553925007574722483}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5303923085450066343, guid: 8a41b32aab7d356418a541588f8149fc, type: 3}
 --- !u!54 &8513789246966416519
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4288,6 +4274,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f720f3726eded68448bbccdd07e1287e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &7973327782393533574
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553925007574722483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.005
+  m_Height: 0.030068487
+  m_Direction: 1
+  m_Center: {x: -6.702813e-12, y: -0.0029979409, z: 0.004999999}
 --- !u!1 &1653349244356717734
 GameObject:
   m_ObjectHideFlags: 0
@@ -12000,7 +12000,7 @@ GameObject:
   - component: {fileID: 2634993652789587179}
   m_Layer: 0
   m_Name: pill
-  m_TagString: Pill
+  m_TagString: OtherPills
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21968,7 +21968,7 @@ GameObject:
   - component: {fileID: 5634722882463328834}
   m_Layer: 0
   m_Name: pill (2)
-  m_TagString: Pill
+  m_TagString: OtherPills
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
