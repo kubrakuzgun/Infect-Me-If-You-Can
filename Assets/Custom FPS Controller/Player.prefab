@@ -12262,7 +12262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pillprefab: {fileID: 4662660711224523036}
   gunbarrel: {fileID: 8250260505280471754}
-  forceamount: 20
+  forceamount: 10
 --- !u!1 &4985735669303656987
 GameObject:
   m_ObjectHideFlags: 0
@@ -13551,7 +13551,7 @@ GameObject:
   - component: {fileID: 2180345481464969778}
   - component: {fileID: 3223274054706643316}
   - component: {fileID: 7504551538219369316}
-  - component: {fileID: 6824323258032926648}
+  - component: {fileID: 5653172562709075758}
   m_Layer: 0
   m_Name: NeedlePrefab
   m_TagString: Syringe
@@ -13567,7 +13567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5446829238515350447}
   m_LocalRotation: {x: -0.06428252, y: 0.7050429, z: -0.1272321, w: 0.6946901}
-  m_LocalPosition: {x: -0.08559551, y: 0.0011014789, z: -0.0021315888}
+  m_LocalPosition: {x: -0.085, y: 0.002, z: -0.001}
   m_LocalScale: {x: 0.024107996, y: 0.02410801, z: 0.024107995}
   m_Children:
   - {fileID: 3910924081287552548}
@@ -13604,20 +13604,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 951a7bc398610a44c93041b84f15fa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &6824323258032926648
-MeshCollider:
+--- !u!136 &5653172562709075758
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5446829238515350447}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4636807724367976354, guid: 5fee1244f3605264abb8d86cdb293b71, type: 3}
+  m_Radius: 0.5232915
+  m_Height: 8.153737
+  m_Direction: 2
+  m_Center: {x: -0.000000041944926, y: 0.0000000100683515, z: 0.53089064}
 --- !u!1 &5546499884709916224
 GameObject:
   m_ObjectHideFlags: 0
