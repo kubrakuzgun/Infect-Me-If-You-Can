@@ -3,7 +3,22 @@ guid: fdaa5d7702b85184dbad18ac686e765d
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Middle
+    second: {fileID: 2100000, guid: 3b15f77b879edd24d8e00077f2218c85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange Plastic
+    second: {fileID: 2100000, guid: 62cf17b23eec8ff42a53c3dcedd995ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Plastic
+    second: {fileID: 2100000, guid: 92c6590842c41904b896edcbc1599de3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

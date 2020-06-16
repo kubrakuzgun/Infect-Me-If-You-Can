@@ -3,7 +3,18 @@ guid: 0b8f41e78e010ba41a1695b8a9fa6136
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Pill Bottle_\xD0\u0153\xD0_\xD1_\xD0\xB5\xD1_\xD0_\xD0_\xD0_"
+    second: {fileID: 2286603579452422017, guid: 9dbeedb6fa00abe4fbb0c9b8d9f042f4,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Pill Bottle_\xD0\u0153\xD0_\xD1_\xD0\xB5\xD1_\xD0_\xD0_\xD0__1"
+    second: {fileID: 2100000, guid: f17c974deece3ed46bf0b9c8eb421029, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -34,7 +45,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 9
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -80,7 +91,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 9
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
