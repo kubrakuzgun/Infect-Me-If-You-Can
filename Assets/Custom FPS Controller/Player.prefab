@@ -4238,7 +4238,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553925007574722483}
   serializedVersion: 2
-  m_Mass: 0.02
+  m_Mass: 0.03
   m_Drag: 0.5
   m_AngularDrag: 0.2
   m_UseGravity: 1
@@ -12606,7 +12606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pillprefab: {fileID: 1553925007574722483}
   gunbarrel: {fileID: 8250260505280471754}
-  forceamount: 20
+  forceamount: 15
 --- !u!1 &4985735669303656987
 GameObject:
   m_ObjectHideFlags: 0

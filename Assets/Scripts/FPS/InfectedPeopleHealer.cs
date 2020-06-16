@@ -9,7 +9,7 @@ public class InfectedPeopleHealer : MonoBehaviour
     public GameObject virus;
     public int health;
     private float timer;
-    
+    private GameObject obj;
     public float wanderRadius;
     public float wanderTimer;
 
@@ -49,6 +49,23 @@ public class InfectedPeopleHealer : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        if(other.tag == "Citizen")
+        {
+            foreach (Transform child in other.gameObject.transform) if (child.CompareTag("Virus")) {
+                    obj = child.gameObject;
+                }
+
+            if (obj.activeInHierarchy == true)
+            {
+                health -= 50;
+                if (health < 50)
+                {
+                    virus.SetActive(true);
+                }
+            }
+
+        }
+
 
         if (other.tag == "Syringe")
         {
@@ -64,7 +81,7 @@ public class InfectedPeopleHealer : MonoBehaviour
         
         else if (other.tag == "Pill")
         {
-            health += 5;
+            health += 10;
 
             if (health >= 100)
             {
@@ -75,7 +92,6 @@ public class InfectedPeopleHealer : MonoBehaviour
 
 
     }
-
 
 
 }

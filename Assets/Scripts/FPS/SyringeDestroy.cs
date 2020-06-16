@@ -29,6 +29,9 @@ public class SyringeDestroy : MonoBehaviour
         {
             Rigidbody rb = this.gameObject.GetComponent<Rigidbody>();
             rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            Collider col = this.gameObject.GetComponent<Collider>();
+            col.enabled = false;
         }
 
 

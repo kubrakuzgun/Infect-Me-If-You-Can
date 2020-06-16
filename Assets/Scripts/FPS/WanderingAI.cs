@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -60,7 +61,7 @@ public class WanderingAI : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Syringe")
+        if (other.tag == "Syringe" || other.tag == "Pill")
         {
             runningTime = 10;
             animator.SetBool("isRunning", true);
