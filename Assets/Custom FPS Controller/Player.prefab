@@ -1895,9 +1895,11 @@ GameObject:
   - component: {fileID: 596725830417094022}
   - component: {fileID: 1098211252453164851}
   - component: {fileID: 8163136302908707133}
+  - component: {fileID: 414408410193872174}
+  - component: {fileID: 6339244480979330696}
   m_Layer: 0
   m_Name: pill (1)
-  m_TagString: Untagged
+  m_TagString: Pill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1909,12 +1911,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109224376155538761}
-  m_LocalRotation: {x: 0.020449536, y: 0.008891067, z: -0.0015458267, w: -0.99975014}
-  m_LocalPosition: {x: -0.012000243, y: 0.029499078, z: -0.0007991381}
+  m_LocalRotation: {x: 0.000000119209275, y: -0.0000000037252899, z: -0.000000030093357,
+    w: 1}
+  m_LocalPosition: {x: -0.017668316, y: 0.01256953, z: 0.000028853072}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7450488618076481389}
-  m_RootOrder: 1
+  m_Father: {fileID: 8569858533609425679}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 253.953, y: -0.000015258789, z: -3.4859924}
 --- !u!33 &1098211252453164851
 MeshFilter:
@@ -1963,6 +1966,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &414408410193872174
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109224376155538761}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0.8
+  m_AngularDrag: 0.5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &6339244480979330696
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109224376155538761}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5303923085450066343, guid: 8a41b32aab7d356418a541588f8149fc, type: 3}
 --- !u!1 &131812872451832765
 GameObject:
   m_ObjectHideFlags: 0
@@ -8406,84 +8439,6 @@ Transform:
   m_Father: {fileID: 7113304984403073246}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2841216896910972992
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7450488618076481389}
-  - component: {fileID: 6243600179021026246}
-  - component: {fileID: 4163426723866320855}
-  - component: {fileID: 8908751763016239594}
-  m_Layer: 0
-  m_Name: Pills_Prefab
-  m_TagString: Pill
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7450488618076481389
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2841216896910972992}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0035, z: 0.014}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8569858533609425679}
-  - {fileID: 596725830417094022}
-  - {fileID: 3363421239964641443}
-  m_Father: {fileID: 8265985373376763533}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &6243600179021026246
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2841216896910972992}
-  serializedVersion: 2
-  m_Mass: 0.02
-  m_Drag: 0.7
-  m_AngularDrag: 0.4
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &4163426723866320855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2841216896910972992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f720f3726eded68448bbccdd07e1287e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!136 &8908751763016239594
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2841216896910972992}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.014208172
-  m_Height: 0.06839437
-  m_Direction: 1
-  m_Center: {x: -0.0042081787, y: 0.011595745, z: 1.6377685e-10}
 --- !u!1 &2878626186808070116
 GameObject:
   m_ObjectHideFlags: 0
@@ -11980,9 +11935,11 @@ GameObject:
   - component: {fileID: 8569858533609425679}
   - component: {fileID: 843657820819484985}
   - component: {fileID: 6379858196188040640}
+  - component: {fileID: 2634993652789587179}
+  - component: {fileID: 3316364354655705009}
   m_Layer: 0
-  m_Name: pill
-  m_TagString: Untagged
+  m_Name: Pills
+  m_TagString: Pill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11994,12 +11951,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4662660711224523036}
-  m_LocalRotation: {x: 0.020449536, y: 0.008891067, z: -0.0015458267, w: -0.99975014}
-  m_LocalPosition: {x: 0.0056996844, y: 0.016998857, z: 0}
+  m_LocalRotation: {x: 0.020449495, y: 0.008891058, z: -0.0015458285, w: -0.99975014}
+  m_LocalPosition: {x: 0.006599608, y: 0.013198626, z: 0.014000321}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7450488618076481389}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 596725830417094022}
+  - {fileID: 3363421239964641443}
+  m_Father: {fileID: 8265985373376763533}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 253.953, y: -0.000015258789, z: -3.4859924}
 --- !u!33 &843657820819484985
 MeshFilter:
@@ -12048,6 +12007,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &2634993652789587179
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4662660711224523036}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0.8
+  m_AngularDrag: 0.5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &3316364354655705009
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4662660711224523036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5303923085450066343, guid: 8a41b32aab7d356418a541588f8149fc, type: 3}
 --- !u!1 &4673101074944170573
 GameObject:
   m_ObjectHideFlags: 0
@@ -12372,7 +12361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777733c9a03be76458128993d44c3506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pillprefab: {fileID: 2841216896910972992}
+  pillprefab: {fileID: 4662660711224523036}
   gunbarrel: {fileID: 8250260505280471754}
   forceamount: 25
 --- !u!1 &4985735669303656987
@@ -21930,9 +21919,11 @@ GameObject:
   - component: {fileID: 3363421239964641443}
   - component: {fileID: 4375680118402104467}
   - component: {fileID: 2332608391977496545}
+  - component: {fileID: 5634722882463328834}
+  - component: {fileID: 6270743564051629442}
   m_Layer: 0
   m_Name: pill (2)
-  m_TagString: Untagged
+  m_TagString: Pill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21944,12 +21935,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8056868909319762877}
-  m_LocalRotation: {x: 0.020449536, y: 0.008891067, z: -0.0015458267, w: -0.99975014}
-  m_LocalPosition: {x: -0.007800248, y: -0.004200965, z: 0.0024008397}
+  m_LocalRotation: {x: 0.000000119209275, y: -0.0000000037252899, z: -0.000000030093357,
+    w: 1}
+  m_LocalPosition: {x: -0.013528586, y: -0.021244265, z: 0.0017738929}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7450488618076481389}
-  m_RootOrder: 2
+  m_Father: {fileID: 8569858533609425679}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 253.953, y: -0.000015258789, z: -3.4859924}
 --- !u!33 &4375680118402104467
 MeshFilter:
@@ -21998,6 +21990,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &5634722882463328834
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8056868909319762877}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0.8
+  m_AngularDrag: 0.5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &6270743564051629442
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8056868909319762877}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5303923085450066343, guid: 8a41b32aab7d356418a541588f8149fc, type: 3}
 --- !u!1 &8068340630125552201
 GameObject:
   m_ObjectHideFlags: 0
@@ -26985,12 +27007,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 579aafc0b7de78940ac11b89def42468, type: 3}
---- !u!4 &7025004996031208741 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 579aafc0b7de78940ac11b89def42468,
-    type: 3}
-  m_PrefabInstance: {fileID: 2596149385260791359}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7078816946734696970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4162906473188131787, guid: 579aafc0b7de78940ac11b89def42468,
@@ -27006,6 +27022,12 @@ GameObject:
 --- !u!1 &6358393017344566843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -271644386298376188, guid: 579aafc0b7de78940ac11b89def42468,
+    type: 3}
+  m_PrefabInstance: {fileID: 2596149385260791359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7025004996031208741 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 579aafc0b7de78940ac11b89def42468,
     type: 3}
   m_PrefabInstance: {fileID: 2596149385260791359}
   m_PrefabAsset: {fileID: 0}
