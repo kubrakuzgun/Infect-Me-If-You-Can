@@ -27,7 +27,6 @@ public class MedicineShot : MonoBehaviour
        
             // syringe.GetComponent<Rigidbody>().AddForce(gunbarrel.forward * forceamount, ForceMode.VelocityChange);
             pill.GetComponent<Rigidbody>().AddForce(gunbarrel.up * forceamount);
-            pill.GetComponent<Rigidbody>().AddForce(gunbarrel.forward * forceamount/2);
         }
 
     }
