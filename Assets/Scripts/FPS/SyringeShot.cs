@@ -23,6 +23,7 @@ public class SyringeShot : MonoBehaviour
             GameObject syringe = Instantiate(needleprefab, gunbarrel.position, Quaternion.identity);
             Rigidbody rb = syringe.GetComponent<Rigidbody>();
             rb.isKinematic = false;
+            rb.detectCollisions = true;
             Quaternion initialRot = needleprefab.transform.rotation;
 
             syringe.transform.rotation = initialRot * Quaternion.Euler(6.0f, -30.0f, -2.0f);

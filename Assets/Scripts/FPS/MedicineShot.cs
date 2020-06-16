@@ -22,16 +22,15 @@ public class MedicineShot : MonoBehaviour
             GameObject pill = Instantiate(pillprefab, gunbarrel.position, Quaternion.identity);
             Rigidbody rb = pill.GetComponent<Rigidbody>();
             rb.isKinematic = false;
-
+            rb.detectCollisions = true;
             Quaternion initialRot = pillprefab.transform.rotation;
             
             pill.transform.rotation = initialRot * Quaternion.Euler(30.0f, 0.0f, 90.0f);
 
             //pill.GetComponent<Rigidbody>().AddForce(-gunbarrel.up * forceamount);
 
-
-            pill.GetComponent<Rigidbody>().AddForce((Vector3.up * (-1)) * forceamount);
-
+           // pill.GetComponent<Rigidbody>().AddForce((gunbarrel.up * (-1)) * forceamount, ForceMode.VelocityChange);
+            pill.GetComponent<Rigidbody>().AddForce((gunbarrel.forward * (-1)) * forceamount, ForceMode.VelocityChange);
 
         }
 
