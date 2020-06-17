@@ -9,12 +9,14 @@ namespace WeaponWheel
         public string Name;
         public int Clips;
         public int ClipSize;
-        private int ammo;
+        public int ammo;
+        public GameObject player;
+        public bool noammo = false;
 
         public int Ammo => ammo;
         public int AmmoInUse => ammoInUse;
 
-        private int ammoInUse;
+        public int ammoInUse;
         public bool _isReloading = false;
         
         public Weapon(int index = 0, string name = "Pistol", int clips = 5, int clipSize = 30)
@@ -27,6 +29,7 @@ namespace WeaponWheel
 
         private void Start()
         {
+            noammo = false;
             ammo = Clips * ClipSize;
             ammoInUse = ClipSize; //The ammo in our current clip
         }
@@ -39,16 +42,18 @@ namespace WeaponWheel
             
             if (ammoInUse > 0)
             {
+                noammo = false;
                 ammoInUse--;
             }
-            else
+            if (ammoInUse<1)
             {
-                StartCoroutine(Reload());
+                noammo = true;
+               // StartCoroutine(Reload());
             }
         }
 
-        private bool exec = false;
-        private IEnumerator Reload()
+        public bool exec = false;
+        public IEnumerator Reload()
         {
             //We need to reload!
             //Change the Clip Only Once

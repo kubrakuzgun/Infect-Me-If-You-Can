@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4448068258976056}
   - component: {fileID: 4895613097855298035}
+  - component: {fileID: 7924672631003781115}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -44,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc984f4f7fa819c44885ad6a2153db32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aimactive: 0
   syringegun: {fileID: 8070150659890679785}
   medgun: {fileID: 2228849594335058412}
   lqsanitizer: {fileID: 50844418365604958}
@@ -52,6 +54,19 @@ MonoBehaviour:
   medaim: {fileID: 6852723838589765504}
   lqaim: {fileID: 6720374780493605695}
   staim: {fileID: 6150750138857717496}
+--- !u!114 &7924672631003781115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743903104223250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f9b3914fafd2a4fb0e6b5e2a5fae8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &7232405898910527
 GameObject:
   m_ObjectHideFlags: 0
@@ -12598,6 +12613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pillprefab: {fileID: 1553925007574722483}
+  mainwep: {fileID: 0}
   gunbarrel: {fileID: 8250260505280471754}
   forceamount: 15
 --- !u!1 &4985735669303656987
@@ -13574,6 +13590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needleprefab: {fileID: 5446829238515350447}
+  mainwep: {fileID: 0}
   gunbarrel: {fileID: 7953471645025570083}
   forceamount: 20
 --- !u!1 &5384547964262620139

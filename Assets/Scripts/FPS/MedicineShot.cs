@@ -22,7 +22,7 @@ public class MedicineShot : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (!mainwep.GetComponent<Weapon>()._isReloading)
+            if (!mainwep.GetComponent<Weapon>()._isReloading && !mainwep.GetComponent<Weapon>().noammo)
             {
                 mainwep.GetComponent<Weapon>().Shoot();
                 GameObject pill = Instantiate(pillprefab, gunbarrel.position, Quaternion.identity);
