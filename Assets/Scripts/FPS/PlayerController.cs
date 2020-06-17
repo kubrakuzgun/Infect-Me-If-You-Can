@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool aimactive = false;
     public GameObject syringegun, medgun, lqsanitizer, stsanitizer;
     public GameObject syraim, medaim, lqaim, staim;
     Boolean medactive, syractive, lqactive, stactive;
@@ -163,24 +164,28 @@ public class PlayerController : MonoBehaviour
             {
                 medaim.SetActive(true);
                 medgun.SetActive(false);
+                aimactive = true;
             }
 
             else if (syractive == true)
             {
                 syraim.SetActive(true);
                 syringegun.SetActive(false);
+                aimactive = true;
             }
 
             else if (lqactive == true)
             {
                 lqaim.SetActive(true);
                 lqsanitizer.SetActive(false);
+                aimactive = true;
             }
 
             else if (stactive == true)
             {
                 staim.SetActive(true);
                 stsanitizer.SetActive(false);
+                aimactive = true;
             }
         }
 
@@ -190,12 +195,14 @@ public class PlayerController : MonoBehaviour
             {
                 medgun.SetActive(true);
                 medaim.SetActive(false);
+                aimactive = false;
             }
 
             else if (syractive == true)
             {
                 syringegun.SetActive(true);
                 syraim.SetActive(false);
+                aimactive = false;
             }
 
 
@@ -203,12 +210,14 @@ public class PlayerController : MonoBehaviour
             {
                 lqsanitizer.SetActive(true);
                 lqaim.SetActive(false);
+                aimactive = false;
             }
 
             else if (stactive == true)
             {
                 stsanitizer.SetActive(true);
                 staim.SetActive(false);
+                aimactive = false;
             }
         }
     }

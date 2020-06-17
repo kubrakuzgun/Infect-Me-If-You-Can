@@ -15,7 +15,7 @@ namespace WeaponWheel
         public int AmmoInUse => ammoInUse;
 
         private int ammoInUse;
-        private bool _isReloading = false;
+        public bool _isReloading = false;
         
         public Weapon(int index = 0, string name = "Pistol", int clips = 5, int clipSize = 30)
         {
@@ -32,7 +32,7 @@ namespace WeaponWheel
         }
 
     
-        private void Shoot()
+        public void Shoot()
         {
             if(ammo + ammoInUse <= 0)
                 return;
@@ -67,8 +67,7 @@ namespace WeaponWheel
     
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0) && !_isReloading)
-                Shoot();
+           
             if (ammoInUse <= 0 && ammo > 0)
             {
                 //Reload Automatically

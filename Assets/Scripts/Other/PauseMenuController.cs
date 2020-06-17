@@ -30,9 +30,11 @@ public class PauseMenuController : MonoBehaviour
 
     void PauseGame()
     {
+        gameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 0f;
+       
         pausemenu_ui.SetActive(true);
 
     }    
@@ -43,5 +45,6 @@ public class PauseMenuController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
+        gameIsPaused = true;
     }
 }
