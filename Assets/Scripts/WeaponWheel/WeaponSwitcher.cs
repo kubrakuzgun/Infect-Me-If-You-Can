@@ -30,7 +30,6 @@ namespace WeaponWheel
                 Debug.LogError("You are trying to assign the Current weapon to a Non-Existing Weapon!");
                 return;
             }
-            Debug.LogError("Selamın aleyk!");
             m_CurrentWeaponIndex = index;
             m_CurrentWeapon = Weapons[index];
             PlayerController.instance.SelectWeapon(index + 1);

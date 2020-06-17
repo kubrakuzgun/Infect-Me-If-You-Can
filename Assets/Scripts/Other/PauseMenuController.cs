@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenuController : MonoBehaviour
 {
 
-    private static bool gameIsPaused;
+    public static bool gameIsPaused=false;
     public GameObject pausemenu_ui;
 
     void Start()
@@ -19,22 +19,29 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gameIsPaused = !gameIsPaused;
-            PauseGame();
+            if (gameIsPaused)
+            {
+                ResumeGame();
+            }
+            else
+                PauseGame();
         }
     }
 
     void PauseGame()
     {
-        if (gameIsPaused)
-        {
-            Time.timeScale = 0f;
-            pausemenu_ui.SetActive(true);
-        }
-        else
-        {
-            Time.timeScale = 1;
-            pausemenu_ui.SetActive(false);
-        }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        pausemenu_ui.SetActive(true);
+
+    }    
+    
+    void ResumeGame()
+    {
+        pausemenu_ui.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
     }
 }
