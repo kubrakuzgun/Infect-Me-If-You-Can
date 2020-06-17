@@ -7682,7 +7682,6 @@ GameObject:
   - component: {fileID: 604627417087015640}
   - component: {fileID: 7647884660855163353}
   - component: {fileID: 1292812474388363162}
-  - component: {fileID: 1396326528481218814}
   m_Layer: 0
   m_Name: Sphere76
   m_TagString: Untagged
@@ -7765,22 +7764,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7492412667766535322, guid: 579aafc0b7de78940ac11b89def42468, type: 3}
---- !u!54 &1396326528481218814
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2544106505360083787}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2615970564830739390
 GameObject:
   m_ObjectHideFlags: 0
@@ -9969,7 +9952,6 @@ GameObject:
   - component: {fileID: 2826545157042993185}
   - component: {fileID: 1817326005967130054}
   - component: {fileID: 8898795814286048967}
-  - component: {fileID: 3954384491339852992}
   m_Layer: 0
   m_Name: Sphere76
   m_TagString: Untagged
@@ -10038,22 +10020,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3954384491339852992
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3607975191647452245}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3618611300085869467
 GameObject:
   m_ObjectHideFlags: 0
@@ -11917,7 +11883,6 @@ GameObject:
   - component: {fileID: 3394557274247758686}
   - component: {fileID: 710600046564748289}
   - component: {fileID: 4055580294177196414}
-  - component: {fileID: 1016567873229461610}
   m_Layer: 0
   m_Name: car_wash_09_02
   m_TagString: Untagged
@@ -11986,22 +11951,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &1016567873229461610
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4628663902012181586}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &4660675341134277171
 GameObject:
   m_ObjectHideFlags: 0
@@ -13298,7 +13247,6 @@ GameObject:
   - component: {fileID: 4808039972772043596}
   - component: {fileID: 8394691991671832676}
   - component: {fileID: 1233769409017780602}
-  - component: {fileID: 4234608221755606883}
   m_Layer: 0
   m_Name: Object01
   m_TagString: Untagged
@@ -13367,22 +13315,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4234608221755606883
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5287769069050351909}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &5290130820752452670
 GameObject:
   m_ObjectHideFlags: 0
@@ -14737,7 +14669,6 @@ GameObject:
   - component: {fileID: 1765674710075497247}
   - component: {fileID: 2960045810448825952}
   - component: {fileID: 795615527992891204}
-  - component: {fileID: 2633984380475516283}
   m_Layer: 0
   m_Name: car_wash_09_02
   m_TagString: Untagged
@@ -14820,22 +14751,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6322959647963469862, guid: 579aafc0b7de78940ac11b89def42468, type: 3}
---- !u!54 &2633984380475516283
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5863740017833343820}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &5883946149599528541
 GameObject:
   m_ObjectHideFlags: 0
@@ -17396,7 +17311,6 @@ GameObject:
   - component: {fileID: 7287825657567147898}
   - component: {fileID: 18959482928328292}
   - component: {fileID: 280119557401963918}
-  - component: {fileID: 4956491565023434006}
   m_Layer: 0
   m_Name: Object01
   m_TagString: Untagged
@@ -17479,22 +17393,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4099932157646263679, guid: 579aafc0b7de78940ac11b89def42468, type: 3}
---- !u!54 &4956491565023434006
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6358393017344566843}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &6374048518475055235
 GameObject:
   m_ObjectHideFlags: 0
@@ -20340,7 +20238,6 @@ GameObject:
   - component: {fileID: 4225383476318787964}
   - component: {fileID: 488126565031440342}
   - component: {fileID: 3441885585755066210}
-  - component: {fileID: 7651623639474540313}
   m_Layer: 0
   m_Name: car_wash_06___01
   m_TagString: Untagged
@@ -20425,22 +20322,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -769587589708254024, guid: 579aafc0b7de78940ac11b89def42468, type: 3}
---- !u!54 &7651623639474540313
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7078816946734696970}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &7112755354303970834
 GameObject:
   m_ObjectHideFlags: 0
@@ -24441,7 +24322,6 @@ GameObject:
   - component: {fileID: 8040050468475863876}
   - component: {fileID: 3170519652822920802}
   - component: {fileID: 1700757259003336904}
-  - component: {fileID: 2960491704584000116}
   m_Layer: 0
   m_Name: car_wash_06___01
   m_TagString: Untagged
@@ -24512,22 +24392,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &2960491704584000116
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314036007654522132}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &8322252172837679504
 GameObject:
   m_ObjectHideFlags: 0
