@@ -27,6 +27,10 @@ TagManager:
   - OtherPills
   - Ground
   - Virus
+  - Borel
+  - Ilac
+  - Sicvepis
+  - KellePaca
   layers:
   - Default
   - TransparentFX
