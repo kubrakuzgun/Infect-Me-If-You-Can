@@ -8116,6 +8116,7 @@ GameObject:
   - component: {fileID: 1770133426523668170}
   - component: {fileID: 7630692116098349868}
   - component: {fileID: 8382271577297937784}
+  - component: {fileID: 3498443559646263449}
   m_Layer: 0
   m_Name: FPS_Controller
   m_TagString: Player
@@ -8260,10 +8261,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
+  m_Radius: 0.8301819
   m_Height: 3.417904
   m_Direction: 1
-  m_Center: {x: -0, y: 0.20895195, z: 0}
+  m_Center: {x: 0.016051114, y: 0.20895195, z: 0.30636722}
 --- !u!114 &8382271577297937784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8397,6 +8398,28 @@ MonoBehaviour:
     mudClipSet: []
     customClipSet:
     - {fileID: 8300000, guid: f2686c5ca48df91498c8cb830189b235, type: 3}
+--- !u!114 &3498443559646263449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678200420907346315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10354c00826aba141a6aee1155cefbae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickup_icon: {fileID: 0}
+  player: {fileID: 1743903104223250}
+  kolonya: 0
+  maske: 0
+  ilac: 0
+  kapsul: 0
+  sicvepis: 0
+  kellepaca: 0
+  borel: 0
+  steam: 0
 --- !u!1 &2708239804630896856
 GameObject:
   m_ObjectHideFlags: 0
