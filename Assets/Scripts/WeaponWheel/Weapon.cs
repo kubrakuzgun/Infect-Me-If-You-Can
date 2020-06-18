@@ -10,7 +10,7 @@ namespace WeaponWheel
         public int Clips;
         public int ClipSize;
         public int ammo;
-        public GameObject player;
+        public GameObject player, fpscontroller;
         public bool noammo = false;
 
         public int Ammo => ammo;
@@ -30,7 +30,7 @@ namespace WeaponWheel
         private void Start()
         {
             noammo = false;
-            ammo = Clips * ClipSize;
+            ammo = ClipSize;
             ammoInUse = ClipSize; //The ammo in our current clip
         }
 
@@ -48,6 +48,8 @@ namespace WeaponWheel
             if (ammoInUse<1)
             {
                 noammo = true;
+                ClipSize = 0;
+                ammo = 0;
                // StartCoroutine(Reload());
             }
         }
@@ -72,12 +74,39 @@ namespace WeaponWheel
     
         private void Update()
         {
-           
-            if (ammoInUse <= 0 && ammo > 0)
+
+            if (name == "Şırınga")
             {
-                //Reload Automatically
-                StartCoroutine(Reload());
+                ClipSize = fpscontroller.GetComponent<InventoryController>().kapsul;
+                ammo = fpscontroller.GetComponent<InventoryController>().kapsul;
+                
             }
+
+            else if (name == "İlaç")
+            {
+                ClipSize = fpscontroller.GetComponent<InventoryController>().ilac;
+                ammo = fpscontroller.GetComponent<InventoryController>().ilac;
+            }
+
+            else if (name == "Liquid")
+            {
+                ClipSize = fpscontroller.GetComponent<InventoryController>().borel;
+                ammo = fpscontroller.GetComponent<InventoryController>().borel;
+            }
+
+            else if (name == "Steam")
+            {
+                ClipSize = fpscontroller.GetComponent<InventoryController>().steam;
+                ammo = fpscontroller.GetComponent<InventoryController>().steam;
+            }
+
+            /*    if (ammoInUse <= 0 && ammo > 0)
+                {
+                    //Reload Automatically
+                    StartCoroutine(Reload());
+                }
+
+            */
         }
     }
 }
