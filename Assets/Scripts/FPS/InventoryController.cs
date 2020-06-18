@@ -37,7 +37,7 @@ public class InventoryController : MonoBehaviour
     {
         if (other.tag == "Kapsul" && Input.GetKeyDown(KeyCode.E))
         {
-            kapsul+=10;
+            kapsul+=5;
             syrgun.GetComponent<Weapon>().ClipSize += kapsul;
             syrgun.GetComponent<Weapon>().ammo += kapsul;
             syrgun.GetComponent<Weapon>().ammoInUse += kapsul;
@@ -48,7 +48,7 @@ public class InventoryController : MonoBehaviour
 
         if (other.tag == "Medicine" && Input.GetKeyDown(KeyCode.E))
         {
-            ilac+=20;
+            ilac+=10;
             medgun.GetComponent<Weapon>().ClipSize += ilac;
             medgun.GetComponent<Weapon>().ammo += ilac;
             medgun.GetComponent<Weapon>().ammoInUse += ilac;
@@ -68,7 +68,7 @@ public class InventoryController : MonoBehaviour
 
         if (other.tag == "Steam" && Input.GetKeyDown(KeyCode.E))
         {
-            steam+=30;
+            steam+=20;
             stgun.GetComponent<Weapon>().ClipSize += steam;
             stgun.GetComponent<Weapon>().ammo += steam;
             stgun.GetComponent<Weapon>().ammoInUse += steam;
