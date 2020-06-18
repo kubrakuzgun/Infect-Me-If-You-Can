@@ -15,5 +15,9 @@ public class HealthBarController : MonoBehaviour
     void Update()
     {
         HealthBarHandler.SetHealthBarValue(player.GetComponent<PlayerHealth>().health/100.0f);
+        if (player.GetComponent<PlayerHealth>().health <= 10)
+        {
+            HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() - 0.01f);
+        }
     }
 }

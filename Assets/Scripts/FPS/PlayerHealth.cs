@@ -30,22 +30,31 @@ public class PlayerHealth : MonoBehaviour
 
             if (obj.activeInHierarchy == true)
             {
-                health -= 50;
-                if (health < 10)
+                if (health > 30)
                 {
-                    Debug.LogWarning("KORONALANDIN!");
+                    health -= 30;
+                    if (health <= 10)
+                    {
+                        Debug.LogWarning("KORONALANDIN!");
+                    }
+                }
+                else
+                {
+                    health = 0;
                 }
             }
+
+
 
         }        
        
 
         if (other.tag == "SurfaceVirus")
         {
-            if (health - 50 >= 0)
+            if (health - 10 >= 0)
             {
-                health -= 50;
-                if (health < 10)
+                health -= 10;
+                if (health <= 10)
                 {
                     Debug.LogWarning("KORONALANDIN!");
                 }
@@ -53,7 +62,6 @@ public class PlayerHealth : MonoBehaviour
             else
             {
                 health = 0;
-                Debug.LogWarning("R.I.P.");
             }
         }
 
