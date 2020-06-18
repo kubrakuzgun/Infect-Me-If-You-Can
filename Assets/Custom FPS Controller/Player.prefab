@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4448068258976056}
   - component: {fileID: 4895613097855298035}
-  - component: {fileID: 7924672631003781115}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -54,19 +53,6 @@ MonoBehaviour:
   medaim: {fileID: 6852723838589765504}
   lqaim: {fileID: 6720374780493605695}
   staim: {fileID: 6150750138857717496}
---- !u!114 &7924672631003781115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743903104223250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f9b3914fafd2a4fb0e6b5e2a5fae8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!1 &7232405898910527
 GameObject:
   m_ObjectHideFlags: 0
@@ -8117,6 +8103,7 @@ GameObject:
   - component: {fileID: 7630692116098349868}
   - component: {fileID: 8382271577297937784}
   - component: {fileID: 3498443559646263449}
+  - component: {fileID: 943837554465111155}
   m_Layer: 0
   m_Name: FPS_Controller
   m_TagString: Player
@@ -8412,6 +8399,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickup_icon: {fileID: 0}
   player: {fileID: 1743903104223250}
+  syrgun: {fileID: 0}
+  medgun: {fileID: 0}
+  lqgun: {fileID: 0}
+  stgun: {fileID: 0}
   kolonya: 0
   maske: 0
   ilac: 0
@@ -8420,6 +8411,19 @@ MonoBehaviour:
   kellepaca: 0
   borel: 0
   steam: 0
+--- !u!114 &943837554465111155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678200420907346315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f9b3914fafd2a4fb0e6b5e2a5fae8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2708239804630896856
 GameObject:
   m_ObjectHideFlags: 0

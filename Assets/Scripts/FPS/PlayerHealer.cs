@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHealer : MonoBehaviour
 {
     public GameObject immunebooster;
-    public GameObject player;
     public GameObject fpscontroller;
     
     // Start is called before the first frame update
@@ -24,12 +23,12 @@ public class PlayerHealer : MonoBehaviour
             {
                 fpscontroller.GetComponent<InventoryController>().kellepaca--;
 
-                if (player.GetComponent<PlayerHealth>().health + 25 <= 100)
+                if (fpscontroller.GetComponent<PlayerHealth>().health + 25 <= 100)
                 {
-                    player.GetComponent<PlayerHealth>().health += 25;
+                    fpscontroller.GetComponent<PlayerHealth>().health += 25;
                 }
                 else
-                    player.GetComponent<PlayerHealth>().health = 100;
+                    fpscontroller.GetComponent<PlayerHealth>().health = 100;
 
                 Debug.LogWarning("Canan Karatay was here!");
 
@@ -40,12 +39,12 @@ public class PlayerHealer : MonoBehaviour
             {
                 fpscontroller.GetComponent<InventoryController>().sicvepis--;
 
-                if (player.GetComponent<PlayerHealth>().health + 10 <= 100)
+                if (fpscontroller.GetComponent<PlayerHealth>().health + 10 <= 100)
                 {
-                    player.GetComponent<PlayerHealth>().health += 10;
+                    fpscontroller.GetComponent<PlayerHealth>().health += 10;
                 }
                 else
-                    player.GetComponent<PlayerHealth>().health = 100;
+                    fpscontroller.GetComponent<PlayerHealth>().health = 100;
 
                 Debug.LogWarning("SIÇVEPİSSSS!");
 
