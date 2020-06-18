@@ -45,6 +45,6 @@ public class PauseMenuController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
-        gameIsPaused = true;
+        gameIsPaused = false;
     }
 }
