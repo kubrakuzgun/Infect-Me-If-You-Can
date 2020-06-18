@@ -14,7 +14,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (health <= 0)
+        {
+            Debug.LogWarning("CoffinDance.mp3");
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -28,30 +31,29 @@ public class PlayerHealth : MonoBehaviour
             if (obj.activeInHierarchy == true)
             {
                 health -= 50;
-                if (health < 1)
+                if (health < 10)
                 {
-                    Debug.Log("KORONALANDIN!");
+                    Debug.LogWarning("KORONALANDIN!");
                 }
             }
 
-        }
+        }        
+       
 
-
-        if (other.tag == "KellePaca")
+        if (other.tag == "SurfaceVirus")
         {
-            if (health + 25 <= 100)
+            if (health - 50 >= 0)
             {
-                health += 25;
+                health -= 50;
+                if (health < 10)
+                {
+                    Debug.LogWarning("KORONALANDIN!");
+                }
             }
-
-            Destroy(other.gameObject);
-        }
-
-        else if (other.tag == "Sıcvepis")
-        {
-            if (health+10 <= 100)
+            else
             {
-                health += 10;
+                health = 0;
+                Debug.LogWarning("R.I.P.");
             }
         }
 

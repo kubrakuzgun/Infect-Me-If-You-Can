@@ -32,6 +32,7 @@ TagManager:
   - Sicvepis
   - KellePaca
   - Kapsul
+  - SurfaceVirus
   layers:
   - Default
   - TransparentFX

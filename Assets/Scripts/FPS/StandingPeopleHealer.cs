@@ -5,8 +5,11 @@ using UnityEngine;
 public class StandingPeopleHealer : MonoBehaviour
 {
     public GameObject virus;
+    public GameObject mask;
     private GameObject obj;
     public int health;
+    public int maskct = 0, kolnct = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,24 +31,59 @@ public class StandingPeopleHealer : MonoBehaviour
                     obj = child.gameObject;
                 }
 
+
             if (obj.activeInHierarchy == true)
             {
-                health -= 50;
-                if (health < 50)
+                if (health > 50)
                 {
+                    health -= 50;
+                    if (health < 20)
+                    {
+                        virus.SetActive(true);
+                    }
+                }
+                else
+                {
+                    health = 0;
                     virus.SetActive(true);
                 }
+
             }
 
         }
 
+        if (other.tag == "SurfaceVirus")
+        {
+            if (health - 25 >= 0)
+            {
+                health -= 25;
+                if (health < 20)
+                {
+                    virus.SetActive(true);
+                }
+            }
+            else
+            {
+                health = 0;
+                virus.SetActive(true);
+            }
+        }
 
         if (other.tag == "Syringe")
         {
-            health += 25;
 
-            if (health >= 100)
+            if (health + 25 <= 100)
             {
+                health += 25;
+
+                if (health >= 100)
+                {
+                    virus.SetActive(false);
+                }
+            }
+            else
+            {
+                health = 100;
                 virus.SetActive(false);
             }
 
@@ -54,15 +92,71 @@ public class StandingPeopleHealer : MonoBehaviour
 
         else if (other.tag == "Pill")
         {
-            health += 10;
-
-            if (health >= 100)
+            if (health + 15 <= 100)
             {
+                health += 10;
+
+                if (health >= 100)
+                {
+                    virus.SetActive(false);
+                }
+            }
+
+            else
+            {
+                health = 100;
                 virus.SetActive(false);
             }
+
             Destroy(other.gameObject);
         }
 
+        else if (other.tag == "Mask" && maskct < 1)
+        {
+            maskct++;
+            mask.SetActive(true);
+
+            if (health + 5 <= 100)
+            {
+                health += 5;
+
+                if (health >= 100)
+                {
+                    virus.SetActive(false);
+                }
+            }
+
+            else
+            {
+                health = 100;
+                virus.SetActive(false);
+            }
+
+            Destroy(other.gameObject);
+        }
+
+        else if (other.tag == "Kolonya" && kolnct < 2)
+        {
+            kolnct++;
+
+            if (health + 5 <= 100)
+            {
+                health += 5;
+
+                if (health >= 100)
+                {
+                    virus.SetActive(false);
+                }
+            }
+
+            else
+            {
+                health = 100;
+                virus.SetActive(false);
+            }
+
+            Destroy(other.gameObject);
+        }
 
     }
 }

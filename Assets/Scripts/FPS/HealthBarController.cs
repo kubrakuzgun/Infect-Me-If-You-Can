@@ -8,12 +8,12 @@ public class HealthBarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HealthBarHandler.SetHealthBarValue(100);
+        HealthBarHandler.SetHealthBarValue(1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        HealthBarHandler.SetHealthBarValue(player.GetComponent<PlayerHealth>().health);
+        HealthBarHandler.SetHealthBarValue(player.GetComponent<PlayerHealth>().health/100.0f);
     }
 }
