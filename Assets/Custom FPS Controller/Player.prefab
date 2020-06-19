@@ -3573,20 +3573,6 @@ Transform:
   m_Father: {fileID: 3258183758769964866}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4045166074067497893
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095107259067063487}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 5
-  m_Height: 152.60388
-  m_Direction: 2
-  m_Center: {x: 0.009745236, y: 0.056381285, z: 79.32601}
 --- !u!54 &4375081275785280957
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3603,6 +3589,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &4045166074067497893
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095107259067063487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 152.60388
+  m_Direction: 2
+  m_Center: {x: 0.009745236, y: 0.056381285, z: 79.32601}
 --- !u!1 &1123386056111290086
 GameObject:
   m_ObjectHideFlags: 0
