@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WeaponWheel;
 
 public class SteamSanitizerConroller : MonoBehaviour
 {
     public GameObject steam;
+    public GameObject mainwep;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,11 @@ public class SteamSanitizerConroller : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            steam.SetActive(true);
+            if (!mainwep.GetComponent<Weapon>()._isReloading && !mainwep.GetComponent<Weapon>().noammo)
+            {
+                mainwep.GetComponent<Weapon>().Shoot();
+                steam.SetActive(true);
+            }
         }        
         else if (Input.GetMouseButtonUp(0))
         {

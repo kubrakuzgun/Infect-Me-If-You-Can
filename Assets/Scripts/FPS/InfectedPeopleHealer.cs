@@ -14,6 +14,7 @@ public class InfectedPeopleHealer : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
     public int maskct = 0, kolnct = 0;
+    public bool infected;
 
     private Vector3 newPos;
     // Start is called before the first frame update
@@ -39,6 +40,15 @@ public class InfectedPeopleHealer : MonoBehaviour
        agent.SetDestination(newPos);
        if(agent.remainingDistance<=2)
             newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+
+        if (virus.activeInHierarchy)
+        {
+            infected = true;
+        }
+        else if (!virus.activeInHierarchy)
+        {
+            infected = false;
+        }
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
@@ -59,13 +69,35 @@ public class InfectedPeopleHealer : MonoBehaviour
     {
         if (other.tag == "Citizen")
         {
-            foreach (Transform child in other.gameObject.transform)
+          /*  foreach (Transform child in other.gameObject.transform)
                 if (child.CompareTag("Virus"))
                 {
                     obj = child.gameObject;
-                }
+                } */
 
-            if (obj.activeInHierarchy == true)
+            if (other.GetComponent<InfectedPeopleHealer>().infected == true)
+            {
+                if (health > 50)
+                {
+                    health -= 50;
+                    if (health < 20)
+                    {
+                        virus.SetActive(true);
+                    }
+                }
+                else
+                {
+                    health = 0;
+                    virus.SetActive(true);
+                }
+            }
+        }
+
+        if (other.tag == "StandingCitizen")
+        {
+          
+
+            if (other.GetComponent<StandingPeopleHealer>().infected == true)
             {
                 if (health > 50)
                 {

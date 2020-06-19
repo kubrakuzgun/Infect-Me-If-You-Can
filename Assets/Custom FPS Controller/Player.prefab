@@ -3573,7 +3573,7 @@ Transform:
   m_Father: {fileID: 3258183758769964866}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &459096691171611495
+--- !u!136 &4045166074067497893
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3583,10 +3583,26 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 12.556721
-  m_Height: 50.563774
+  m_Radius: 5
+  m_Height: 152.60388
   m_Direction: 2
-  m_Center: {x: 0.75246245, y: -1.2646877, z: 25.838728}
+  m_Center: {x: 0.009745236, y: 0.056381285, z: 79.32601}
+--- !u!54 &4375081275785280957
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095107259067063487}
+  serializedVersion: 2
+  m_Mass: 0.0001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1123386056111290086
 GameObject:
   m_ObjectHideFlags: 0
@@ -8248,10 +8264,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.8301819
+  m_Radius: 0.73548144
   m_Height: 3.417904
   m_Direction: 1
-  m_Center: {x: 0.016051114, y: 0.20895195, z: 0.30636722}
+  m_Center: {x: 0.016051114, y: 0.20895195, z: 0.21166676}
 --- !u!114 &8382271577297937784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15701,6 +15717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steam: {fileID: 1095107259067063487}
+  mainwep: {fileID: 0}
 --- !u!1 &6149940590364463372
 GameObject:
   m_ObjectHideFlags: 0
@@ -17309,6 +17326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liquid: {fileID: 8061646248734170421}
+  mainwep: {fileID: 0}
 --- !u!1 &6300990720431762664
 GameObject:
   m_ObjectHideFlags: 0
@@ -22564,9 +22582,11 @@ GameObject:
   - component: {fileID: 6034774196409082914}
   - component: {fileID: 2190683368963586214}
   - component: {fileID: 8927708757255333306}
+  - component: {fileID: 6736101016510569368}
+  - component: {fileID: 3658107110009385942}
   m_Layer: 0
   m_Name: spray
-  m_TagString: Untagged
+  m_TagString: LiquidSanitizer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27308,6 +27328,36 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!136 &6736101016510569368
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8061646248734170421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 2.2866836
+  m_Height: 7.3577337
+  m_Direction: 2
+  m_Center: {x: 0.0021475542, y: -0.029091211, z: 3.875276}
+--- !u!54 &3658107110009385942
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8061646248734170421}
+  serializedVersion: 2
+  m_Mass: 0.0001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8068340630125552201
 GameObject:
   m_ObjectHideFlags: 0

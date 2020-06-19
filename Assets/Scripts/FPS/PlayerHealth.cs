@@ -23,31 +23,45 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.tag == "Citizen")
         {
-            foreach (Transform child in other.gameObject.transform) if (child.CompareTag("Virus"))
-                {
-                    obj = child.gameObject;
-                }
-
-            if (obj.activeInHierarchy == true)
+            if (other.GetComponent<InfectedPeopleHealer>().infected == true)
             {
                 if (health > 30)
                 {
                     health -= 30;
                     if (health <= 10)
                     {
-                        Debug.LogWarning("KORONALANDIN!");
+                        Debug.LogWarning("KORONOOOO!");
                     }
                 }
-                else
-                {
-                    health = 0;
-                }
+            }
+            else
+            {
+                health = 0;
             }
 
+        }
+
+        if (other.tag == "StandingCitizen")
+        {
+            if (other.GetComponent<StandingPeopleHealer>().infected == true)
+            {
+                if (health > 30)
+                {
+                    health -= 30;
+                    if (health <= 10)
+                    {
+                        Debug.LogWarning("KORONOOOO!");
+                    }
+                }
+            }
+            else
+            {
+                health = 0;
+            }
+
+        }
 
 
-        }        
-       
 
         if (other.tag == "SurfaceVirus")
         {

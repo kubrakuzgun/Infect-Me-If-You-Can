@@ -9,6 +9,7 @@ public class StandingPeopleHealer : MonoBehaviour
     private GameObject obj;
     public int health;
     public int maskct = 0, kolnct = 0;
+    public bool infected;
 
     // Start is called before the first frame update
     void Start()
@@ -19,20 +20,21 @@ public class StandingPeopleHealer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (virus.activeInHierarchy)
+        {
+            infected = true;
+        }
+        else if (!virus.activeInHierarchy)
+        {
+            infected = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Citizen")
         {
-            foreach (Transform child in other.gameObject.transform) if (child.CompareTag("Virus"))
-                {
-                    obj = child.gameObject;
-                }
-
-
-            if (obj.activeInHierarchy == true)
+            if (other.GetComponent<InfectedPeopleHealer>().infected == true)
             {
                 if (health > 50)
                 {
@@ -47,7 +49,6 @@ public class StandingPeopleHealer : MonoBehaviour
                     health = 0;
                     virus.SetActive(true);
                 }
-
             }
 
         }

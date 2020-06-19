@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WeaponWheel;
 
 public class LiquidSanitizerConroller : MonoBehaviour
 {
     public GameObject liquid;
+    public GameObject mainwep;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,11 @@ public class LiquidSanitizerConroller : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            liquid.SetActive(true);
+            if (!mainwep.GetComponent<Weapon>()._isReloading && !mainwep.GetComponent<Weapon>().noammo)
+            {
+                mainwep.GetComponent<Weapon>().Shoot();
+                liquid.SetActive(true);
+            }
         }
         else 
         {
