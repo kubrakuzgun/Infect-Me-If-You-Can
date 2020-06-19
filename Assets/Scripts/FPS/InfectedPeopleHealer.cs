@@ -13,11 +13,13 @@ public class InfectedPeopleHealer : MonoBehaviour
     private GameObject obj;
     public float wanderRadius;
     public float wanderTimer;
-    public int maskct=0, kolnct=0;
+    public int maskct = 0, kolnct = 0;
 
+    private Vector3 newPos;
     // Start is called before the first frame update
     void Start()
     {
+         newPos = RandomNavSphere(transform.position, wanderRadius, -1);
         agent = GetComponent<NavMeshAgent>();
         timer = wanderTimer;
     }
@@ -26,13 +28,17 @@ public class InfectedPeopleHealer : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= wanderTimer)
+       /* if (timer >= wanderTimer)
         {
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+           
             agent.SetDestination(newPos);
             timer = 0;
-        }
-
+        }*/
+       
+       agent.SetDestination(newPos);
+       if(agent.remainingDistance<=2)
+            newPos = RandomNavSphere(transform.position, wanderRadius, -1);
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
@@ -44,16 +50,18 @@ public class InfectedPeopleHealer : MonoBehaviour
         NavMeshHit navHit;
 
         NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-
+        
         return navHit.position;
     }
 
-    
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Citizen")
+        if (other.tag == "Citizen")
         {
-            foreach (Transform child in other.gameObject.transform) if (child.CompareTag("Virus")) {
+            foreach (Transform child in other.gameObject.transform)
+                if (child.CompareTag("Virus"))
+                {
                     obj = child.gameObject;
                 }
 
@@ -72,9 +80,7 @@ public class InfectedPeopleHealer : MonoBehaviour
                     health = 0;
                     virus.SetActive(true);
                 }
-                 
             }
-
         }
 
         if (other.tag == "SurfaceVirus")
@@ -97,7 +103,6 @@ public class InfectedPeopleHealer : MonoBehaviour
 
         if (other.tag == "Syringe")
         {
-
             if (health + 25 <= 100)
             {
                 health += 25;
@@ -115,7 +120,7 @@ public class InfectedPeopleHealer : MonoBehaviour
 
             Destroy(other.gameObject);
         }
-        
+
         else if (other.tag == "Pill")
         {
             if (health + 15 <= 100)
@@ -137,7 +142,7 @@ public class InfectedPeopleHealer : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        else if (other.tag == "Mask" && maskct<1)
+        else if (other.tag == "Mask" && maskct < 1)
         {
             maskct++;
             mask.SetActive(true);
@@ -161,7 +166,7 @@ public class InfectedPeopleHealer : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        else if (other.tag == "Kolonya" && kolnct<2)
+        else if (other.tag == "Kolonya" && kolnct < 2)
         {
             kolnct++;
 
@@ -183,8 +188,5 @@ public class InfectedPeopleHealer : MonoBehaviour
 
             Destroy(other.gameObject);
         }
-
     }
-
-
 }
