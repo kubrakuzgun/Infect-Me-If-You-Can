@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float health=100;
     public GameObject gameover_panel, music, wastedsound, wastedpanel;
+    public bool infected=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
                     health -= 25;
                     if (health <= 10)
                     {
-                        Debug.LogWarning("KORONOOOO!");
+                        infected = true;
                     }
                 }
                 else
@@ -60,7 +61,7 @@ public class PlayerHealth : MonoBehaviour
                     health -= 25;
                     if (health <= 10)
                     {
-                        Debug.LogWarning("KORONOOOO!");
+                        infected = true;
                     }
                 }
                 else
@@ -79,7 +80,7 @@ public class PlayerHealth : MonoBehaviour
                 health -= 5;
                 if (health <= 10)
                 {
-                    Debug.LogWarning("KORONALANDIN!");
+                    infected = true;
                 }
             }
             else

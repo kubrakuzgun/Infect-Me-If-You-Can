@@ -72,7 +72,6 @@ public class PauseMenuController : MonoBehaviour
     {
         PlayerPrefs.SetFloat("volume", slider.GetComponent<ChangeVolume>().newVolume);
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
-        Debug.LogWarning("Volume changed...");
     }
 
     public void LoadMainMenu()
@@ -84,7 +83,6 @@ public class PauseMenuController : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.LogWarning("Quitting game...");
         Application.Quit();
     }
 

@@ -27,7 +27,6 @@ public class SetFullscreen : MonoBehaviour
         {
             toggleval = 1;
             Screen.fullScreen = true;
-            Debug.LogWarning("Fullscreen");
             PlayerPrefs.SetInt("fullscreen", toggleval);
 
 
@@ -36,7 +35,6 @@ public class SetFullscreen : MonoBehaviour
         {
             toggleval = 0;
             Screen.fullScreen = false;
-            Debug.LogWarning("Windowed");
             PlayerPrefs.SetInt("fullscreen", toggleval);
         }
     }

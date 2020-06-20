@@ -22,14 +22,12 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.LogWarning("Quitting game...");
         Application.Quit();
     }   
     
     public void SetVolume()
     {
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
-        Debug.LogWarning("Volume changed...");
     }    
 
 
