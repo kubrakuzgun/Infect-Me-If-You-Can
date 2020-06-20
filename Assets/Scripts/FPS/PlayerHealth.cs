@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float health=100;
-    public GameObject gameover_panel, music;
+    public GameObject gameover_panel, music, wastedsound, wastedpanel;
     // Start is called before the first frame update
     void Start()
     {
         gameover_panel.SetActive(false);
+        wastedpanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -18,11 +19,14 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Debug.LogWarning("CoffinDance.mp3");
-            gameover_panel.SetActive(true);
-            music.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            Time.timeScale = 0f;
+
+            this.gameObject.GetComponent<FirstPersonAIO>().enableCameraMovement = false;
+            this.gameObject.GetComponent<FirstPersonAIO>().playerCanMove = false;
+            this.gameObject.GetComponent<FirstPersonAIO>().autoCrosshair = false;
+            wastedpanel.SetActive(true);
+            wastedsound.SetActive(true);
+            StartCoroutine(WaitSec());
+
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -84,5 +88,17 @@ public class PlayerHealth : MonoBehaviour
             }
         }
 
+    }
+
+    public IEnumerator WaitSec()
+    {
+        yield return new WaitForSeconds(3f);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+
+        wastedpanel.SetActive(false);
+        gameover_panel.SetActive(true);
+        music.SetActive(true);
     }
 }
