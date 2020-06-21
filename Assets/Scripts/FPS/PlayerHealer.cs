@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealer : MonoBehaviour
 {
     public GameObject immunebooster;
-    public GameObject fpscontroller;
+    public GameObject fpscontroller, player;
     public GameObject heal_icon;
     public GameObject kellep, scw;
     
@@ -19,7 +19,7 @@ public class PlayerHealer : MonoBehaviour
     void Update()
     {
 
-        if(immunebooster.activeInHierarchy && immunebooster.tag == "KellePaca" && fpscontroller.GetComponent<InventoryController>().kellepaca <= 0)
+        if(player.GetComponent<PlayerController>().kellepactive && immunebooster.tag == "KellePaca" && fpscontroller.GetComponent<InventoryController>().kellepaca <= 0)
         {
             kellep.SetActive(false);
             heal_icon.SetActive(false);
@@ -27,14 +27,22 @@ public class PlayerHealer : MonoBehaviour
         else heal_icon.SetActive(true);
 
 
-        if (immunebooster.activeInHierarchy && immunebooster.tag == "Sıcvepis" && fpscontroller.GetComponent<InventoryController>().sicvepis <= 0)
+        if (player.GetComponent<PlayerController>().scwactive && immunebooster.tag == "Sıcvepis" && fpscontroller.GetComponent<InventoryController>().sicvepis <= 0)
         {
             scw.SetActive(false);
             heal_icon.SetActive(false);
         }
         else heal_icon.SetActive(true);
 
-
+        if (!player.GetComponent<PlayerController>().scwactive)
+        {
+            heal_icon.SetActive(false);
+        }       
+        
+        if (!player.GetComponent<PlayerController>().kellepactive)
+        {
+            heal_icon.SetActive(false);
+        }
 
         if (Input.GetKeyDown(KeyCode.H))
         {
@@ -66,5 +74,7 @@ public class PlayerHealer : MonoBehaviour
 
             }
         }
+
+        
     }
 }

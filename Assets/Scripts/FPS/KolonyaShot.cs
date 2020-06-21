@@ -42,10 +42,10 @@ public class KolonyaShot : MonoBehaviour
                 rb.useGravity = true;
                 Quaternion initialRot = kolonyaprefab.transform.rotation;
 
-                kolonya.transform.rotation = initialRot * Quaternion.Euler(90.0f, 0.0f, 0.0f);
+                kolonya.transform.rotation = initialRot * Quaternion.Euler(0.0f, 0.0f, 0.0f);
 
-                kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.forward) * forceamount);
-                kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.up * (-1)) * forceamount);
+                //kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.forward) * forceamount);
+                kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.right * (-1)) * forceamount);
             }
 
 

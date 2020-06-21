@@ -48,7 +48,7 @@ public class InventoryController : MonoBehaviour
 
         if (other.tag == "Medicine" && Input.GetKeyDown(KeyCode.E))
         {
-            ilac+=10;
+            ilac+=5;
             medgun.GetComponent<Weapon>().ClipSize += ilac;
             medgun.GetComponent<Weapon>().ammo += ilac;
             medgun.GetComponent<Weapon>().ammoInUse += ilac;
@@ -68,7 +68,7 @@ public class InventoryController : MonoBehaviour
 
         if (other.tag == "Steam" && Input.GetKeyDown(KeyCode.E))
         {
-            steam+=20;
+            steam+=15;
             stgun.GetComponent<Weapon>().ClipSize += steam;
             stgun.GetComponent<Weapon>().ammo += steam;
             stgun.GetComponent<Weapon>().ammoInUse += steam;
@@ -79,24 +79,40 @@ public class InventoryController : MonoBehaviour
         if (other.tag == "Kolonya" && Input.GetKeyDown(KeyCode.E))
         {
             kolonya++;
+            kolonya_hands.GetComponent<Weapon>().ClipSize += steam;
+            kolonya_hands.GetComponent<Weapon>().ammo += steam;
+            kolonya_hands.GetComponent<Weapon>().ammoInUse += steam;
+            kolonya_hands.GetComponent<Weapon>().noammo = false;
             other.gameObject.SetActive(false);
         }
 
         if (other.tag == "MaskPack" && Input.GetKeyDown(KeyCode.E))
         {
             maske+=10;
+            mask_hands.GetComponent<Weapon>().ClipSize += steam;
+            mask_hands.GetComponent<Weapon>().ammo += steam;
+            mask_hands.GetComponent<Weapon>().ammoInUse += steam;
+            mask_hands.GetComponent<Weapon>().noammo = false;
             other.gameObject.SetActive(false);
         }
 
         if (other.tag == "Sicvepis" && Input.GetKeyDown(KeyCode.E))
         {
             sicvepis++;
+            scw_hands.GetComponent<Weapon>().ClipSize += steam;
+            scw_hands.GetComponent<Weapon>().ammo += steam;
+            scw_hands.GetComponent<Weapon>().ammoInUse += steam;
+            scw_hands.GetComponent<Weapon>().noammo = false;
             other.gameObject.SetActive(false);
         }
 
         if (other.tag == "KellePaca" && Input.GetKeyDown(KeyCode.E))
         {
             kellepaca++;
+            kellep_hands.GetComponent<Weapon>().ClipSize += steam;
+            kellep_hands.GetComponent<Weapon>().ammo += steam;
+            kellep_hands.GetComponent<Weapon>().ammoInUse += steam;
+            kellep_hands.GetComponent<Weapon>().noammo = false;
             other.gameObject.SetActive(false);
         }
 

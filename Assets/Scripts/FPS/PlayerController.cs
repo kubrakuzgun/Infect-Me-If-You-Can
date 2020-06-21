@@ -10,13 +10,13 @@ public class PlayerController : MonoBehaviour
     public bool aimactive = false;
     public GameObject syringegun, medgun, lqsanitizer, stsanitizer;
     public GameObject syraim, medaim, lqaim, staim;
-    Boolean medactive, syractive, lqactive, stactive;
+    public Boolean medactive, syractive, lqactive, stactive;
 
     public GameObject maske, kolonya;
     public GameObject maskeaim, kolonyaaim;
 
     public GameObject scw, kellep;
-    Boolean maskeactive, kolonyaactive, scwactive, kellepactive;
+    public Boolean maskeactive, kolonyaactive, scwactive, kellepactive;
 
     public static PlayerController instance;
 
@@ -398,7 +398,7 @@ public class PlayerController : MonoBehaviour
                 aimactive = false;
             }           
             
-            else if (maskeactive == true)
+            else if (kolonyaactive == true)
             {
                 kolonya.SetActive(true);
                 kolonyaaim.SetActive(false);
