@@ -9,7 +9,7 @@ public class PauseMenuController : MonoBehaviour
 {
 
     public static bool gameIsPaused=false;
-    public GameObject pausemenu_ui, options_menu;
+    public GameObject pausemenu_ui, options_menu, fps_controller;
     public Slider slider;
 
     void Start()
@@ -71,6 +71,11 @@ public class PauseMenuController : MonoBehaviour
     public void SetVolume()
     {
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
+    }
+        
+    public void SetSensitivity()
+    {
+        fps_controller.GetComponent<FirstPersonAIO>().mouseSensitivity = PlayerPrefs.GetFloat("sensitivity");
     }
 
     public void LoadMainMenu()

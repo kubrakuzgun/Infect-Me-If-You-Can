@@ -8440,6 +8440,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  gameover_panel: {fileID: 0}
+  music: {fileID: 0}
+  wastedsound: {fileID: 0}
+  wastedpanel: {fileID: 0}
+  infected: 0
 --- !u!1 &2708239804630896856
 GameObject:
   m_ObjectHideFlags: 0

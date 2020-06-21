@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("fullscreen", 1)
+        PlayerPrefs.SetInt("fullscreen", 1);
     }
 
     // Update is called once per frame
