@@ -98,6 +98,30 @@ namespace WeaponWheel
             {
                 ClipSize = fpscontroller.GetComponent<InventoryController>().steam;
                 ammo = fpscontroller.GetComponent<InventoryController>().steam;
+            }            
+            
+            else if (name == "Maske")
+            {
+                ClipSize = fpscontroller.GetComponent<InventoryController>().maske;
+                ammo = fpscontroller.GetComponent<InventoryController>().maske;
+            }     
+            
+            else if (name == "Kolonya")
+            {
+                ClipSize = fpscontroller.GetComponent<InventoryController>().kolonya;
+                ammo = fpscontroller.GetComponent<InventoryController>().kolonya;
+            }            
+            
+            else if (name == "Scw")
+            {
+                ClipSize = fpscontroller.GetComponent<InventoryController>().sicvepis;
+                ammo = fpscontroller.GetComponent<InventoryController>().sicvepis;
+            }  
+            
+            else if (name == "Kellepaca")
+            {
+                ClipSize = fpscontroller.GetComponent<InventoryController>().kellepaca;
+                ammo = fpscontroller.GetComponent<InventoryController>().kellepaca;
             }
 
             /*    if (ammoInUse <= 0 && ammo > 0)

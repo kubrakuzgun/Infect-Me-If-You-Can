@@ -6,16 +6,35 @@ public class PlayerHealer : MonoBehaviour
 {
     public GameObject immunebooster;
     public GameObject fpscontroller;
+    public GameObject heal_icon;
+    public GameObject kellep, scw;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        heal_icon.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if(immunebooster.activeInHierarchy && immunebooster.tag == "KellePaca" && fpscontroller.GetComponent<InventoryController>().kellepaca <= 0)
+        {
+            kellep.SetActive(false);
+            heal_icon.SetActive(false);
+        }
+        else heal_icon.SetActive(true);
+
+
+        if (immunebooster.activeInHierarchy && immunebooster.tag == "Sıcvepis" && fpscontroller.GetComponent<InventoryController>().sicvepis <= 0)
+        {
+            scw.SetActive(false);
+            heal_icon.SetActive(false);
+        }
+        else heal_icon.SetActive(true);
+
+
 
         if (Input.GetKeyDown(KeyCode.H))
         {
@@ -30,7 +49,6 @@ public class PlayerHealer : MonoBehaviour
                 else
                     fpscontroller.GetComponent<PlayerHealth>().health = 100;
 
-                Debug.LogWarning("Canan Karatay was here!");
 
             }
 
@@ -45,8 +63,6 @@ public class PlayerHealer : MonoBehaviour
                 }
                 else
                     fpscontroller.GetComponent<PlayerHealth>().health = 100;
-
-                Debug.LogWarning("SIÇVEPİSSSS!");
 
             }
         }

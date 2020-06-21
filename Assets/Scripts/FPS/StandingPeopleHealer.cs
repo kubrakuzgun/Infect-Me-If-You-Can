@@ -112,7 +112,7 @@ public class StandingPeopleHealer : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        else if (other.tag == "Mask" && maskct < 1)
+        else if (other.tag == "MaskHeal" && maskct < 1)
         {
             maskct++;
             mask.SetActive(true);
@@ -136,7 +136,7 @@ public class StandingPeopleHealer : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        else if (other.tag == "Kolonya" && kolnct < 2)
+        else if (other.tag == "KolonyaHeal" && kolnct < 2)
         {
             kolnct++;
 

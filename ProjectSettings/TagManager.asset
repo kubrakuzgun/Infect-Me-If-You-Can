@@ -35,6 +35,8 @@ TagManager:
   - SurfaceVirus
   - Citizen
   - StandingCitizen
+  - KolonyaHeal
+  - MaskHeal
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ using WeaponWheel;
 public class InventoryController : MonoBehaviour
 {
     public GameObject pickup_icon, player;
-    public GameObject syrgun, medgun, lqgun, stgun;
+    public GameObject syrgun, medgun, lqgun, stgun, kolonya_hands, mask_hands, scw_hands, kellep_hands;
     public int kolonya, maske, ilac, kapsul, sicvepis, kellepaca, borel, steam;
     // Start is called before the first frame update
     void Start()

@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: pel
-    second: {fileID: 2100000, guid: ffabcf4d99cc75e419b0a2c580a09ee3, type: 2}
+    second: {fileID: 2100000, guid: e981177430c4c4f46b87dedb47577b5b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

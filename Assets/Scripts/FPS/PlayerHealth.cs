@@ -19,14 +19,13 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            Debug.LogWarning("CoffinDance.mp3");
-
             this.gameObject.GetComponent<FirstPersonAIO>().enableCameraMovement = false;
             this.gameObject.GetComponent<FirstPersonAIO>().playerCanMove = false;
             this.gameObject.GetComponent<FirstPersonAIO>().autoCrosshair = false;
             wastedpanel.SetActive(true);
             wastedsound.SetActive(true);
             StartCoroutine(WaitSec());
+            Time.timeScale = 0f;
 
         }
     }
@@ -96,7 +95,6 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Time.timeScale = 0f;
 
         wastedpanel.SetActive(false);
         gameover_panel.SetActive(true);

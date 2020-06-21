@@ -158,18 +158,23 @@ namespace WeaponWheel
             else if (IsInside(pos[0], pos[5], pos[6], mousePos))
             {
                 EnableHighlight(4);
+                WeaponSwitcher.instance.SwitchWeapon(4);
             }
             else if (IsInside(pos[0], pos[6], pos[7], mousePos))
             {
                 EnableHighlight(5);
+                WeaponSwitcher.instance.SwitchWeapon(5);
             }
             else if (IsInside(pos[0], pos[7], pos[8], mousePos))
             {
                 EnableHighlight(6);
+                WeaponSwitcher.instance.SwitchWeapon(6);
+
             }
             else if (IsInside(pos[0], pos[8], pos[1], mousePos))
             {
                 EnableHighlight(7);
+                WeaponSwitcher.instance.SwitchWeapon(7);
             }
         }
 
