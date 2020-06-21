@@ -9,38 +9,29 @@ public class InfectedPeopleHealer : MonoBehaviour
     public GameObject virus;
     public GameObject mask;
     public int health;
-    private float timer;
     private GameObject obj;
-    public float wanderRadius;
-    public float wanderTimer;
     public int maskct = 0, kolnct = 0;
     public bool infected;
+    
+    [Tooltip("How far ahead of the current position to look ahead for a wander")]
+    public float wanderDistance = 20;
+    [Tooltip("The amount that the agent rotates direction")]
+    public float wanderRate = 2;
 
-    private Vector3 newPos;
-    // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-         newPos = RandomNavSphere(transform.position, wanderRadius, -1);
         agent = GetComponent<NavMeshAgent>();
-        timer = wanderTimer;
     }
 
-    // Update is called once per frame
+    public void Start()
+    {
+        agent.enabled = true;
+        agent.destination = Target();
+    }
+
     void Update()
     {
-        timer += Time.deltaTime;
-       /* if (timer >= wanderTimer)
-        {
-            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
-           
-            agent.SetDestination(newPos);
-            timer = 0;
-        }*/
-       
-       agent.SetDestination(newPos);
-       if(agent.remainingDistance<=2)
-            newPos = RandomNavSphere(transform.position, wanderRadius, -1);
-
+        agent.destination = Target();
         if (virus.activeInHierarchy)
         {
             infected = true;
@@ -50,20 +41,12 @@ public class InfectedPeopleHealer : MonoBehaviour
             infected = false;
         }
     }
-
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    
+    private Vector3 Target()
     {
-        Vector3 randDirection = Random.insideUnitSphere * dist;
-
-        randDirection += origin;
-
-        NavMeshHit navHit;
-
-        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-        
-        return navHit.position;
+        var direction = transform.forward + Random.insideUnitSphere * wanderRate;
+        return transform.position + direction.normalized * wanderDistance;
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
