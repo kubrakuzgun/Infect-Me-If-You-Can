@@ -9,15 +9,16 @@ public class ChangeVolume : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<Slider>().value =PlayerPrefs.GetFloat("volume");
+        this.GetComponent<Slider>().value = PlayerPrefs.GetFloat("volume");
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerPrefs.SetFloat("volume", this.gameObject.GetComponent<Slider>().value);
+        newVolume = this.GetComponent<Slider>().value;
 
-        newVolume = this.GetComponent<Slider>().normalizedValue;
+        PlayerPrefs.SetFloat("volume", newVolume);
+
     }
     
 }

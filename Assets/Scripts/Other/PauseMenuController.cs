@@ -70,7 +70,6 @@ public class PauseMenuController : MonoBehaviour
     }
     public void SetVolume()
     {
-        PlayerPrefs.SetFloat("volume", slider.GetComponent<ChangeVolume>().newVolume);
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 
