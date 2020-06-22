@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public GameObject maskeaim, kolonyaaim;
 
     public GameObject scw, kellep;
+    public GameObject heal_icon;
     public Boolean maskeactive, kolonyaactive, scwactive, kellepactive;
 
     public static PlayerController instance;
@@ -405,5 +406,18 @@ public class PlayerController : MonoBehaviour
                 aimactive = false;
             }
         }
+
+
+        if (!scwactive)
+        {
+            heal_icon.SetActive(false); 
+        }
+
+        if (!kellepactive)
+        {
+            heal_icon.SetActive(false); 
+        }
+
+
     }
 }

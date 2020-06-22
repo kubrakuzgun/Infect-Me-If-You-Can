@@ -6,7 +6,7 @@ public class StandingPeopleHealer : MonoBehaviour
 {
     public GameObject virus;
     public GameObject mask;
-    private GameObject obj;
+    public GameObject gamemanager;
     public int health;
     public int maskct = 0, kolnct = 0;
     public bool infected;
@@ -70,7 +70,7 @@ public class StandingPeopleHealer : MonoBehaviour
             }
         }
 
-        if (other.tag == "Syringe")
+        if (other.tag == "Syringe" && health<100)
         {
 
             if (health + 25 <= 100)
@@ -80,18 +80,20 @@ public class StandingPeopleHealer : MonoBehaviour
                 if (health >= 100)
                 {
                     virus.SetActive(false);
+                    gamemanager.GetComponent<MissionController>().healedpeople++;
                 }
             }
             else
             {
                 health = 100;
                 virus.SetActive(false);
+                gamemanager.GetComponent<MissionController>().healedpeople++;
             }
 
             Destroy(other.gameObject);
         }
 
-        else if (other.tag == "Pill")
+        else if (other.tag == "Pill" && health < 100)
         {
             if (health + 15 <= 100)
             {
@@ -100,6 +102,7 @@ public class StandingPeopleHealer : MonoBehaviour
                 if (health >= 100)
                 {
                     virus.SetActive(false);
+                    gamemanager.GetComponent<MissionController>().healedpeople++;
                 }
             }
 
@@ -107,6 +110,7 @@ public class StandingPeopleHealer : MonoBehaviour
             {
                 health = 100;
                 virus.SetActive(false);
+                gamemanager.GetComponent<MissionController>().healedpeople++;
             }
 
             Destroy(other.gameObject);
@@ -115,6 +119,7 @@ public class StandingPeopleHealer : MonoBehaviour
         else if (other.tag == "MaskHeal" && maskct < 1)
         {
             maskct++;
+            gamemanager.GetComponent<MissionController>().givenmask++;
             mask.SetActive(true);
 
             if (health + 5 <= 100)
@@ -124,6 +129,7 @@ public class StandingPeopleHealer : MonoBehaviour
                 if (health >= 100)
                 {
                     virus.SetActive(false);
+                    gamemanager.GetComponent<MissionController>().healedpeople++;
                 }
             }
 
@@ -131,14 +137,16 @@ public class StandingPeopleHealer : MonoBehaviour
             {
                 health = 100;
                 virus.SetActive(false);
+                gamemanager.GetComponent<MissionController>().healedpeople++;
             }
 
             Destroy(other.gameObject);
         }
 
-        else if (other.tag == "KolonyaHeal" && kolnct < 2)
+        else if (other.tag == "KolonyaHeal" && kolnct < 1)
         {
             kolnct++;
+            gamemanager.GetComponent<MissionController>().givenkolonya++;
 
             if (health + 5 <= 100)
             {
@@ -147,6 +155,7 @@ public class StandingPeopleHealer : MonoBehaviour
                 if (health >= 100)
                 {
                     virus.SetActive(false);
+                    gamemanager.GetComponent<MissionController>().healedpeople++;
                 }
             }
 
@@ -154,6 +163,7 @@ public class StandingPeopleHealer : MonoBehaviour
             {
                 health = 100;
                 virus.SetActive(false);
+                gamemanager.GetComponent<MissionController>().healedpeople++;
             }
 
             Destroy(other.gameObject);

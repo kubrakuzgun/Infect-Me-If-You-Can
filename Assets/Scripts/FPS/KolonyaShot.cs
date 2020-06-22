@@ -5,36 +5,29 @@ using WeaponWheel;
 
 public class KolonyaShot : MonoBehaviour
 {
-    public GameObject kolonyaprefab, kolonyaobj, kolonyaobj2;
+    public GameObject kolonyaprefab, kolonyaobj;
     public GameObject mainwep;
     public Transform gunbarrel;
     public float forceamount;
     // Start is called before the first frame update
     void Start()
     {
-      //  kolonyaobj.SetActive(true);
-      //  kolonyaobj2.SetActive(true);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-      /*  if (mainwep.GetComponent<Weapon>().noammo)
+        if (mainwep.GetComponent<Weapon>().noammo)
         {
             kolonyaobj.SetActive(false);
-            kolonyaobj2.SetActive(false);
         }
         else if(!mainwep.GetComponent<Weapon>().noammo)
         {
             kolonyaobj.SetActive(true);
-            kolonyaobj2.SetActive(true);
-        }
-        */
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (!mainwep.GetComponent<Weapon>()._isReloading && !mainwep.GetComponent<Weapon>().noammo)
+            if (Input.GetMouseButtonDown(0))
             {
                 mainwep.GetComponent<Weapon>().Shoot();
                 GameObject kolonya = Instantiate(kolonyaprefab, gunbarrel.position, Quaternion.identity);
@@ -46,9 +39,12 @@ public class KolonyaShot : MonoBehaviour
 
                 //kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.forward) * forceamount);
                 kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.right * (-1)) * forceamount);
+
             }
 
-
         }
+        
+
+
     }
 }

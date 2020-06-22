@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SurfaceVirusCleaner : MonoBehaviour
 {
     public int strength;
+    public GameObject gamemanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,34 +23,38 @@ public class SurfaceVirusCleaner : MonoBehaviour
     {
         if (other.tag == "LiquidSanitizer")
         {
-            if (strength - 10 >= 0)
+            if (strength - 15 >= 0)
             {
-                strength -= 10;
+                strength -= 15;
                 if (strength <= 0)
                 {
                     Destroy(this.gameObject);
+                    gamemanager.GetComponent<MissionController>().cleanedsurface++;
                 }
             }
             else
             {
                 strength = 0;
                 Destroy(this.gameObject);
+                gamemanager.GetComponent<MissionController>().cleanedsurface++;
             }
         }      
         if (other.tag == "SteamSanitizer")
         {
-            if (strength - 20 >= 0)
+            if (strength - 25 >= 0)
             {
-                strength -= 20;
+                strength -= 25;
                 if (strength <= 0)
                 {
                     Destroy(this.gameObject);
+                    gamemanager.GetComponent<MissionController>().cleanedsurface++;
                 }
             }
             else
             {
                 strength = 0;
                 Destroy(this.gameObject);
+                gamemanager.GetComponent<MissionController>().cleanedsurface++;
             }
         }
 

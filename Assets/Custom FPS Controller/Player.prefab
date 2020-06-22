@@ -53,12 +53,21 @@ MonoBehaviour:
   medaim: {fileID: 6852723838589765504}
   lqaim: {fileID: 6720374780493605695}
   staim: {fileID: 6150750138857717496}
+  medactive: 0
+  syractive: 0
+  lqactive: 0
+  stactive: 0
   maske: {fileID: 8723543265668029854}
   kolonya: {fileID: 3010523793038711383}
   maskeaim: {fileID: 976551850599691132}
   kolonyaaim: {fileID: 5835745148238856010}
   scw: {fileID: 8817703207343625668}
   kellep: {fileID: 5616095869036853203}
+  heal_icon: {fileID: 0}
+  maskeactive: 0
+  kolonyaactive: 0
+  scwactive: 0
+  kellepactive: 0
 --- !u!1 &7232405898910527
 GameObject:
   m_ObjectHideFlags: 0
@@ -4150,6 +4159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7304263022333506340}
+  - component: {fileID: 8408486261298565372}
   m_Layer: 0
   m_Name: KellepacaPrefab
   m_TagString: Untagged
@@ -4172,6 +4182,22 @@ Transform:
   m_Father: {fileID: 8773471471358778510}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8408486261298565372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786688992007351470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebf518db454774409af8ede845daeeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpscontroller: {fileID: 2678200420907346315}
+  heal_icon: {fileID: 0}
+  kellep_obj: {fileID: 5677733946044874847}
+  kellep_hands: {fileID: 5616095869036853203}
 --- !u!1 &791267051679850320
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,7 +4646,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maskprefab: {fileID: 5587468834199253190}
   maskobj: {fileID: 7488244467176971567}
-  maskobj2: {fileID: 3208558812700796741}
   mainwep: {fileID: 8723543265668029854}
   gunbarrel: {fileID: 464758473329432729}
   forceamount: 20
@@ -4805,6 +4830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1522038528841239844}
+  - component: {fileID: 5275968987173681095}
   m_Layer: 0
   m_Name: ScwPrefab
   m_TagString: Untagged
@@ -4827,6 +4853,22 @@ Transform:
   m_Father: {fileID: 405954558149204160}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5275968987173681095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065464081303416004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7a1781b7a0a24a8e354b3fc698ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpscontroller: {fileID: 2678200420907346315}
+  heal_icon: {fileID: 0}
+  scw_obj: {fileID: 7414833582504720819}
+  scw_hands: {fileID: 8817703207343625668}
 --- !u!1 &1068738440848850911
 GameObject:
   m_ObjectHideFlags: 0
@@ -19812,6 +19854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3661568088678741473}
+  - component: {fileID: 7345184571636370333}
   m_Layer: 0
   m_Name: Maskee
   m_TagString: Untagged
@@ -19834,6 +19877,20 @@ Transform:
   m_Father: {fileID: 5484536907586736620}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7345184571636370333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169860702052626044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951a4c5e4c1f6c04ca8b8519e6c4bbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask_hands: {fileID: 8723543265668029854}
+  mask_obj: {fileID: 3208558812700796741}
 --- !u!1 &5170185394550586736
 GameObject:
   m_ObjectHideFlags: 0
@@ -22529,7 +22586,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kolonyaprefab: {fileID: 5766577921318313576}
   kolonyaobj: {fileID: 4026249143320024173}
-  kolonyaobj2: {fileID: 2518347339234498780}
   mainwep: {fileID: 3010523793038711383}
   gunbarrel: {fileID: 6387308379216087809}
   forceamount: 15
@@ -33284,6 +33340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2435581101793876489}
+  - component: {fileID: 6635060956424503146}
   m_Layer: 0
   m_Name: Kolonyaa
   m_TagString: Untagged
@@ -33306,6 +33363,20 @@ Transform:
   m_Father: {fileID: 4227167970520820676}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6635060956424503146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8036193452057688014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ad0ea7ea833ab4bb2ca46bc3c2db5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kolonya_hands: {fileID: 3010523793038711383}
+  kolonya_obj: {fileID: 2518347339234498780}
 --- !u!1 &8040529503635331064
 GameObject:
   m_ObjectHideFlags: 0
@@ -33614,7 +33685,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -33667,7 +33738,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -33783,7 +33854,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -34099,7 +34170,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 7
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -34162,7 +34233,7 @@ ParticleSystem:
     angle: 6
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.5
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -34245,7 +34316,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.3
+      value: 0.9
       mode: 0
       spread: 0
       speed:
@@ -45423,15 +45494,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
---- !u!1 &1095107259067063487 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1095107259067095583}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1095107259066957983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5a97962f7d5ba4df0823334b52c7c02c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1095107259067095583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1095107259067063487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c,
     type: 3}
   m_PrefabInstance: {fileID: 1095107259067095583}
   m_PrefabAsset: {fileID: 0}
