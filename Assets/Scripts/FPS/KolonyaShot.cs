@@ -19,13 +19,14 @@ public class KolonyaShot : MonoBehaviour
     void Update()
     {
 
-        if (mainwep.GetComponent<Weapon>().noammo)
+       /* if (mainwep.GetComponent<Weapon>().noammo)
         {
             kolonyaobj.SetActive(false);
-        }
-        else if(!mainwep.GetComponent<Weapon>().noammo)
+        } */
+
+        if(!mainwep.GetComponent<Weapon>().noammo)
         {
-            kolonyaobj.SetActive(true);
+           // kolonyaobj.SetActive(true);
 
             if (Input.GetMouseButtonDown(0))
             {

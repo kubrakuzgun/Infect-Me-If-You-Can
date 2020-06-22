@@ -17,6 +17,7 @@ public class RemainingKolonya : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (kolonya_hands.GetComponent<Weapon>().noammo)
         {
             kolonya_obj.SetActive(false);
@@ -25,5 +26,6 @@ public class RemainingKolonya : MonoBehaviour
         {
             kolonya_obj.SetActive(true);
         }
+        */
     }
 }

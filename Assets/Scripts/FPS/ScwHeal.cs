@@ -20,13 +20,13 @@ public class ScwHeal : MonoBehaviour
     {
         if (scw_hands.GetComponent<Weapon>().noammo)
         {
-            scw_obj.SetActive(false);
+            // scw_obj.SetActive(false);
             heal_icon.SetActive(false);
         }
 
         else if (!scw_hands.GetComponent<Weapon>().noammo) 
         {
-            scw_obj.SetActive(true);
+          //   scw_obj.SetActive(true);
             heal_icon.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.H))

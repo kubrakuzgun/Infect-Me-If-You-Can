@@ -20,13 +20,14 @@ public class MaskShot : MonoBehaviour
     void Update()
     {
         
-        if (mainwep.GetComponent<Weapon>().noammo)
+       /* if (mainwep.GetComponent<Weapon>().noammo)
         {
             maskobj.SetActive(false);
-        }
-        else if(!mainwep.GetComponent<Weapon>().noammo)
+        } */
+
+        if(!mainwep.GetComponent<Weapon>().noammo)
         {
-            maskobj.SetActive(true);
+           // maskobj.SetActive(true);
 
             if (Input.GetMouseButtonDown(0))
             {

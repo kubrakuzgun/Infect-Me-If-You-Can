@@ -21,13 +21,13 @@ public class KellepacaHeal : MonoBehaviour
 
         if (kellep_hands.GetComponent<Weapon>().noammo)
         {
-            kellep_obj.SetActive(false);
+          //  kellep_obj.SetActive(false);
             heal_icon.SetActive(false);
         }
 
         else if (!kellep_hands.GetComponent<Weapon>().noammo)
         {
-            kellep_obj.SetActive(true);
+          //  kellep_obj.SetActive(true);
             heal_icon.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.H))

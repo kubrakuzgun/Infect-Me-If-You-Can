@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     public void SelectWeapon(int weapon)
     {
+        e_icon.SetActive(false);
+
         if (syractive == false && weapon == 1)
         {
             syringegun.SetActive(true);

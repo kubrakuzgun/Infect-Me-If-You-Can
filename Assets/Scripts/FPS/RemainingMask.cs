@@ -16,7 +16,7 @@ public class RemainingMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (mask_hands.GetComponent<Weapon>().noammo)
+      /*  if (mask_hands.GetComponent<Weapon>().noammo)
         {
             mask_obj.SetActive(false);
         }
@@ -24,5 +24,6 @@ public class RemainingMask : MonoBehaviour
         {
             mask_obj.SetActive(true);
         }
+        */
     }
 }
