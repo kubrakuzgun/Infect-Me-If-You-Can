@@ -23,9 +23,9 @@ public class SurfaceVirusCleaner : MonoBehaviour
     {
         if (other.tag == "LiquidSanitizer")
         {
-            if (strength - 15 >= 0)
+            if (strength - 20 >= 0)
             {
-                strength -= 15;
+                strength -= 20;
                 if (strength <= 0)
                 {
                     Destroy(this.gameObject);

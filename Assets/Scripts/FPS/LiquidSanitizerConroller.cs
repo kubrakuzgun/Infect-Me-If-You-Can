@@ -28,7 +28,7 @@ public class LiquidSanitizerConroller : MonoBehaviour
 
         if(Input.GetMouseButtonUp(0))
         {
-            StartCoroutine(WaitSec());
+            liquid.SetActive(false);
         }
     }
 
