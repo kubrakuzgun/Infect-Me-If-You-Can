@@ -64,6 +64,7 @@ MonoBehaviour:
   scw: {fileID: 8817703207343625668}
   kellep: {fileID: 5616095869036853203}
   heal_icon: {fileID: 0}
+  e_icon: {fileID: 0}
   maskeactive: 0
   kolonyaactive: 0
   scwactive: 0
@@ -11938,6 +11939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10354c00826aba141a6aee1155cefbae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigerred: 0
   pickup_icon: {fileID: 0}
   player: {fileID: 1743903104223250}
   syrgun: {fileID: 0}
