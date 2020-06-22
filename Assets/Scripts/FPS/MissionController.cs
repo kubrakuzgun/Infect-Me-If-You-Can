@@ -18,6 +18,9 @@ public class MissionController : MonoBehaviour
         mission2.SetActive(false);
         mission3.SetActive(false);
         mission4.SetActive(false);
+        mission1done = true;
+        mission2done = true;
+        mission3done = true;
     }
 
     // Update is called once per frame
@@ -60,7 +63,6 @@ public class MissionController : MonoBehaviour
             mission4done = true;
             greenpanel.SetActive(true);
             StartCoroutine(WaitSec());
-            Time.timeScale = 0f;
         }
 
     }
