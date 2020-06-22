@@ -39,6 +39,12 @@ public class SyringeShot : MonoBehaviour
             }
 
         }
+        else
+        {
+
+            Rigidbody srb = needleprefab.GetComponent<Rigidbody>();
+            srb.useGravity = false;
+        }
 
     }
 }

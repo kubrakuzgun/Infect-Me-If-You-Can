@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using WeaponWheel;
 
@@ -37,6 +38,14 @@ public class MedicineShot : MonoBehaviour
                
 
         }
+
+        else
+        {
+
+            Rigidbody prb = pillprefab.GetComponent<Rigidbody>();
+            prb.useGravity = false;
+        }
+
 
     }
 }

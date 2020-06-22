@@ -26,7 +26,17 @@ public class SteamSanitizerConroller : MonoBehaviour
         }        
         else if (Input.GetMouseButtonUp(0))
         {
+            StartCoroutine(WaitSec());
+        }
+        else
+        {
             steam.SetActive(false);
         }
+    }
+
+    public IEnumerator WaitSec()
+    {
+        yield return new WaitForSeconds(2f);
+        steam.SetActive(false);
     }
 }

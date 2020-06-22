@@ -41,6 +41,12 @@ public class MaskShot : MonoBehaviour
 
                     mask.GetComponent<Rigidbody>().AddForce((gunbarrel.right * (-1)) * forceamount);
             }
+            else
+            {
+
+                    Rigidbody mrb = maskprefab.GetComponent<Rigidbody>();
+                    mrb.useGravity = false;
+            }
         }
         
 

@@ -9,6 +9,7 @@ public class KolonyaShot : MonoBehaviour
     public GameObject mainwep;
     public Transform gunbarrel;
     public float forceamount;
+    private GameObject kolonya;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class KolonyaShot : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 mainwep.GetComponent<Weapon>().Shoot();
-                GameObject kolonya = Instantiate(kolonyaprefab, gunbarrel.position, Quaternion.identity);
+                kolonya = Instantiate(kolonyaprefab, gunbarrel.position, Quaternion.identity);
                 Rigidbody rb = kolonya.GetComponent<Rigidbody>();
                 rb.useGravity = true;
                 Quaternion initialRot = kolonyaprefab.transform.rotation;
@@ -41,6 +42,12 @@ public class KolonyaShot : MonoBehaviour
                 //kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.forward) * forceamount);
                 kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.right * (-1)) * forceamount);
 
+            }
+            else
+            {
+
+                Rigidbody krb = kolonyaprefab.GetComponent<Rigidbody>();
+                krb.useGravity = false;
             }
 
         }
