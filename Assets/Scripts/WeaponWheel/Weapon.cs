@@ -124,6 +124,18 @@ namespace WeaponWheel
                 ammo = fpscontroller.GetComponent<InventoryController>().kellepaca;
             }
 
+            if (ammoInUse > 0)
+            {
+                noammo = false;
+            }
+
+            if (ammoInUse < 1)
+            {
+                noammo = true;
+                ClipSize = 0;
+                ammo = 0;
+            }
+
             /*    if (ammoInUse <= 0 && ammo > 0)
                 {
                     //Reload Automatically

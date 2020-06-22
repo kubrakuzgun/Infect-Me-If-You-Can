@@ -24023,7 +24023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steam: {fileID: 1095107259067063487}
-  mainwep: {fileID: 0}
+  mainwep: {fileID: 8498022628902837325}
 --- !u!1 &6149940590364463372
 GameObject:
   m_ObjectHideFlags: 0
@@ -25897,7 +25897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liquid: {fileID: 8061646248734170421}
-  mainwep: {fileID: 0}
+  mainwep: {fileID: 50844418365604958}
 --- !u!1 &6300990720431762664
 GameObject:
   m_ObjectHideFlags: 0
@@ -33596,7 +33596,7 @@ Transform:
   m_GameObject: {fileID: 8061646248734170421}
   m_LocalRotation: {x: -0.0000000074505797, y: 0.90565866, z: -0.000000010943039,
     w: -0.42400753}
-  m_LocalPosition: {x: -0.102, y: 0.265, z: -0.033}
+  m_LocalPosition: {x: -0.083, y: 0.264, z: -0.062}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7025004996031208741}
@@ -33610,8 +33610,8 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8061646248734170421}
   serializedVersion: 6
-  lengthInSec: 5
-  simulationSpeed: 0.7
+  lengthInSec: 2
+  simulationSpeed: 0.9
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -33685,7 +33685,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -33738,7 +33738,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -33854,7 +33854,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1.7
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -34170,7 +34170,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 10
+    maxNumParticles: 20
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -34230,7 +34230,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 6
+    angle: 8
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0.5
@@ -34316,7 +34316,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.9
+      value: 1
       mode: 0
       spread: 0
       speed:
@@ -38303,7 +38303,7 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.2
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -38334,10 +38334,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.2866836
-  m_Height: 7.3577337
+  m_Radius: 2.898857
+  m_Height: 13.205113
   m_Direction: 2
-  m_Center: {x: 0.0021475542, y: -0.029091211, z: 3.875276}
+  m_Center: {x: -0.009352455, y: -0.029091187, z: 6.798961}
 --- !u!54 &3658107110009385942
 Rigidbody:
   m_ObjectHideFlags: 0

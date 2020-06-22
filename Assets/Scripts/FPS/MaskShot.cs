@@ -43,8 +43,5 @@ public class MaskShot : MonoBehaviour
         }
         
 
-       
-
-
     }
 }

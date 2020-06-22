@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject scw, kellep;
     public GameObject heal_icon;
+    public GameObject e_icon;
     public Boolean maskeactive, kolonyaactive, scwactive, kellepactive;
 
     public static PlayerController instance;
@@ -318,6 +319,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
+            e_icon.SetActive(false);
+
             if (medactive == true)
             {
                 medaim.SetActive(true);

@@ -110,7 +110,7 @@ public class InfectedPeopleHealer : MonoBehaviour
         }
 
 
-        if (other.tag == "Syringe" && health < 100)
+        if (other.tag == "Syringe" && health < 100 && infected)
         {
             if (health + 25 <= 100)
             {
@@ -132,7 +132,7 @@ public class InfectedPeopleHealer : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        else if (other.tag == "Pill" && health < 100)
+        else if (other.tag == "Pill" && health < 100 && infected)
         {
             if (health + 15 <= 100)
             {
@@ -167,16 +167,22 @@ public class InfectedPeopleHealer : MonoBehaviour
 
                 if (health >= 100)
                 {
-                    virus.SetActive(false);
-                    gamemanager.GetComponent<MissionController>().healedpeople++;
+                    if (infected)
+                    {
+                        virus.SetActive(false);
+                        gamemanager.GetComponent<MissionController>().healedpeople++;
+                    }
                 }
             }
 
             else
             {
                 health = 100;
-                virus.SetActive(false);
-                gamemanager.GetComponent<MissionController>().healedpeople++;
+                if (infected)
+                {
+                    virus.SetActive(false);
+                    gamemanager.GetComponent<MissionController>().healedpeople++;
+                }
             }
 
             Destroy(other.gameObject);
@@ -193,16 +199,23 @@ public class InfectedPeopleHealer : MonoBehaviour
 
                 if (health >= 100)
                 {
-                    virus.SetActive(false);
-                    gamemanager.GetComponent<MissionController>().healedpeople++;
+                    if(infected)
+                    {
+                        virus.SetActive(false);
+                        gamemanager.GetComponent<MissionController>().healedpeople++;
+                    }
                 }
             }
 
             else
             {
                 health = 100;
-                virus.SetActive(false);
-                gamemanager.GetComponent<MissionController>().healedpeople++;
+                if (infected)
+                {
+                    virus.SetActive(false);
+                    gamemanager.GetComponent<MissionController>().healedpeople++;
+                }
+
             }
 
             Destroy(other.gameObject);

@@ -27,8 +27,14 @@ public class LiquidSanitizerConroller : MonoBehaviour
         }
         else 
         {
-            liquid.SetActive(false);
+            WaitSec();
         }
+    }
+
+    public IEnumerator WaitSec()
+    {
+        yield return new WaitForSeconds(2f);
+        liquid.SetActive(false);
     }
 }
 
