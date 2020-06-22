@@ -43,12 +43,7 @@ public class KolonyaShot : MonoBehaviour
                 kolonya.GetComponent<Rigidbody>().AddForce((gunbarrel.right * (-1)) * forceamount);
 
             }
-            else
-            {
 
-                Rigidbody krb = kolonyaprefab.GetComponent<Rigidbody>();
-                krb.useGravity = false;
-            }
 
         }
         

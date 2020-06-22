@@ -23,20 +23,12 @@ public class SteamSanitizerConroller : MonoBehaviour
                 mainwep.GetComponent<Weapon>().Shoot();
                 steam.SetActive(true);
             }
-        }        
-        else if (Input.GetMouseButtonUp(0))
-        {
-            StartCoroutine(WaitSec());
         }
-        else
+
+        if (Input.GetMouseButtonUp(0))
         {
             steam.SetActive(false);
         }
     }
 
-    public IEnumerator WaitSec()
-    {
-        yield return new WaitForSeconds(2f);
-        steam.SetActive(false);
-    }
 }

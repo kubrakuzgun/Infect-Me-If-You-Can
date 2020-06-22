@@ -25,19 +25,16 @@ public class LiquidSanitizerConroller : MonoBehaviour
                 liquid.SetActive(true);
             }
         }
-        else if(Input.GetMouseButtonUp(0))
+
+        if(Input.GetMouseButtonUp(0))
         {
             StartCoroutine(WaitSec());
-        }
-        else
-        {
-            liquid.SetActive(false);
         }
     }
 
     public IEnumerator WaitSec()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         liquid.SetActive(false);
     }
 }

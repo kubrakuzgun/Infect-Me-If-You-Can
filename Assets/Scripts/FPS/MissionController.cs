@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MissionController : MonoBehaviour
 {
-    public Text numbers1, numbers2, numbers3, numbers4;
+    public Text numbers1, numbers2, numbers3, numbers4, numbers3_2;
     public GameObject greenpanel, winpanel, hiddenvaccinebox;
     public GameObject mission1, mission2, mission3, mission4;
     public bool mission1done, mission2done, mission3done, mission4done;
@@ -26,6 +26,7 @@ public class MissionController : MonoBehaviour
         numbers1.text = healedpeople.ToString() + "/10";
         numbers2.text = cleanedsurface.ToString() + "/9";
         numbers3.text = givenmask.ToString() + "/10";
+        numbers3_2.text = givenkolonya.ToString() + "/10";
         numbers4.text = foundvaccine.ToString() + "/1";
         
         if (healedpeople >= 10)
