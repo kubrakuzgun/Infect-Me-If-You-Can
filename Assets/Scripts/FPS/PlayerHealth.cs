@@ -25,8 +25,6 @@ public class PlayerHealth : MonoBehaviour
             wastedpanel.SetActive(true);
             wastedsound.SetActive(true);
             StartCoroutine(WaitSec());
-            Time.timeScale = 0f;
-
         }
     }
     private void OnTriggerEnter(Collider other)
